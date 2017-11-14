@@ -15,10 +15,20 @@
 		2EFFA10A1F8919BF00D3BA04 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFA1091F8919BF00D3BA04 /* OpenGL.framework */; };
 		2EFFA10C1F8919C600D3BA04 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFA10B1F8919C600D3BA04 /* GLUT.framework */; };
 		2EFFA1101F891BEE00D3BA04 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFA10F1F891BEE00D3BA04 /* libEngine.a */; };
+		7208D5381FBB9FD7006F6F2A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7208D5371FBB9FD7006F6F2A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		2EFFA0DE1F8918B200D3BA04 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7208D5331FBB9FD6006F6F2A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -51,6 +61,9 @@
 		2EFFA10B1F8919C600D3BA04 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		2EFFA10D1F8919D100D3BA04 /* libEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngine.a; path = include/lib/libEngine.a; sourceTree = "<group>"; };
 		2EFFA10F1F891BEE00D3BA04 /* libEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngine.a; path = libMac/libEngine.a; sourceTree = "<group>"; };
+		7208D5351FBB9FD6006F6F2A /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		7208D5371FBB9FD7006F6F2A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7208D53C1FBB9FF1006F6F2A /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7208D5321FBB9FD6006F6F2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -72,6 +92,7 @@
 			children = (
 				2EFFA0EA1F89199500D3BA04 /* include */,
 				2EFFA0F71F89199500D3BA04 /* src */,
+				7208D5361FBB9FD6006F6F2A /* test */,
 				2EFFA0E11F8918B200D3BA04 /* Products */,
 				2EFFA1081F8919BF00D3BA04 /* Frameworks */,
 			);
@@ -81,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				2EFFA0E01F8918B200D3BA04 /* Projet_CPlusPlus */,
+				7208D5351FBB9FD6006F6F2A /* test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +156,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7208D5361FBB9FD6006F6F2A /* test */ = {
+			isa = PBXGroup;
+			children = (
+				7208D53C1FBB9FF1006F6F2A /* catch.hpp */,
+				7208D5371FBB9FD7006F6F2A /* main.cpp */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +185,23 @@
 			productReference = 2EFFA0E01F8918B200D3BA04 /* Projet_CPlusPlus */;
 			productType = "com.apple.product-type.tool";
 		};
+		7208D5341FBB9FD6006F6F2A /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7208D53B1FBB9FD7006F6F2A /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				7208D5311FBB9FD6006F6F2A /* Sources */,
+				7208D5321FBB9FD6006F6F2A /* Frameworks */,
+				7208D5331FBB9FD6006F6F2A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test;
+			productName = test;
+			productReference = 7208D5351FBB9FD6006F6F2A /* test */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +213,10 @@
 				TargetAttributes = {
 					2EFFA0DF1F8918B200D3BA04 = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					7208D5341FBB9FD6006F6F2A = {
+						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -182,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				2EFFA0DF1F8918B200D3BA04 /* Projet_CPlusPlus */,
+				7208D5341FBB9FD6006F6F2A /* test */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +249,14 @@
 				2EFFA1011F89199500D3BA04 /* GraphicPrimitives.cpp in Sources */,
 				2EFFA1041F89199500D3BA04 /* MyControlEngine.cpp in Sources */,
 				2EFFA1051F89199500D3BA04 /* MyGameEngine.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7208D5311FBB9FD6006F6F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7208D5381FBB9FD7006F6F2A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +374,24 @@
 			};
 			name = Release;
 		};
+		7208D5391FBB9FD7006F6F2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7208D53A1FBB9FD7006F6F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +412,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7208D53B1FBB9FD7006F6F2A /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7208D5391FBB9FD7006F6F2A /* Debug */,
+				7208D53A1FBB9FD7006F6F2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
