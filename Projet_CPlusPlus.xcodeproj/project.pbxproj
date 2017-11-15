@@ -16,6 +16,8 @@
 		2EFFA10C1F8919C600D3BA04 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFA10B1F8919C600D3BA04 /* GLUT.framework */; };
 		2EFFA1101F891BEE00D3BA04 /* libEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFFA10F1F891BEE00D3BA04 /* libEngine.a */; };
 		7208D5381FBB9FD7006F6F2A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7208D5371FBB9FD7006F6F2A /* main.cpp */; };
+		7208D5401FBC6A84006F6F2A /* DamierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7208D53E1FBC6A84006F6F2A /* DamierFactory.cpp */; };
+		7208D5431FBC6AD8006F6F2A /* Case.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7208D5411FBC6AD8006F6F2A /* Case.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +66,10 @@
 		7208D5351FBB9FD6006F6F2A /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		7208D5371FBB9FD7006F6F2A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7208D53C1FBB9FF1006F6F2A /* catch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		7208D53E1FBC6A84006F6F2A /* DamierFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DamierFactory.cpp; path = models/DamierFactory.cpp; sourceTree = "<group>"; };
+		7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DamierFactory.hpp; path = models/DamierFactory.hpp; sourceTree = "<group>"; };
+		7208D5411FBC6AD8006F6F2A /* Case.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Case.cpp; path = models/Case.cpp; sourceTree = "<group>"; };
+		7208D5421FBC6AD8006F6F2A /* Case.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Case.hpp; path = models/Case.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 		2EFFA0F71F89199500D3BA04 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				7208D53D1FBC6A1D006F6F2A /* models */,
 				2EFFA0F81F89199500D3BA04 /* main.cpp */,
 				2EFFA0F91F89199500D3BA04 /* MyControlEngine.cpp */,
 				2EFFA0FA1F89199500D3BA04 /* MyControlEngine.h */,
@@ -163,6 +170,17 @@
 				7208D5371FBB9FD7006F6F2A /* main.cpp */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		7208D53D1FBC6A1D006F6F2A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7208D53E1FBC6A84006F6F2A /* DamierFactory.cpp */,
+				7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */,
+				7208D5411FBC6AD8006F6F2A /* Case.cpp */,
+				7208D5421FBC6AD8006F6F2A /* Case.hpp */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +264,10 @@
 			files = (
 				2EFFA1061F89199500D3BA04 /* MyGraphicEngine.cpp in Sources */,
 				2EFFA1031F89199500D3BA04 /* main.cpp in Sources */,
+				7208D5431FBC6AD8006F6F2A /* Case.cpp in Sources */,
 				2EFFA1011F89199500D3BA04 /* GraphicPrimitives.cpp in Sources */,
 				2EFFA1041F89199500D3BA04 /* MyControlEngine.cpp in Sources */,
+				7208D5401FBC6A84006F6F2A /* DamierFactory.cpp in Sources */,
 				2EFFA1051F89199500D3BA04 /* MyGameEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
