@@ -10,10 +10,13 @@
 #define DamierFactory_hpp
 
 #include <stdio.h>
+#include "Case.hpp"
 
 class DamierFactory {
     public:
-        Case* creerDamier(int ligne, int colonne);
+        Case** creerDamier(int lignes, int colonnes);
+    private:
+        int nombreDeCases(int lignes, int colonnes);
 };
 
 
