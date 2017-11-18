@@ -10,6 +10,6 @@ private:
     int nombre_de_case;
     
 public:
-    MyGraphicEngine(const int lignes, const int colonnes);
+    MyGraphicEngine(Case** damier, int nombre_de_case):damier(damier), nombre_de_case(nombre_de_case){}
     virtual void Draw();
 };
