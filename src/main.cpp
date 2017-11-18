@@ -6,7 +6,7 @@
 
 int main(int argc, char * argv[]){
     Engine e(argc,argv);
-    GraphicEngine* ge = new MyGraphicEngine();
+    GraphicEngine* ge = new MyGraphicEngine(1, 5);
     GameEngine* gme = new MyGameEngine();
     ControlEngine* ce = new MyControlEngine();
     e.setGraphicEngine(ge);

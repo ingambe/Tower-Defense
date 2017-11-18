@@ -10,6 +10,7 @@
 #define Case_hpp
 
 #include <stdio.h>
+#include "GraphicPrimitives.h"
 
 class Case{
     private:
@@ -18,8 +19,9 @@ class Case{
         float width;
         float height;
     public:
-    Case(float x, float y, float width, float height):x(x),y(y),width(width), height(height){}
+        Case(float x, float y, float width, float height):x(x),y(y),width(width), height(height){}
         Case();
+        void dessiner();
 };
 
 #endif /* Case_hpp */
