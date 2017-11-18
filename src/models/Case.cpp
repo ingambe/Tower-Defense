@@ -13,5 +13,5 @@ Case::Case(){
 }
 
 void Case::dessiner(){
-    GraphicPrimitives::drawOutlinedRect2D(0.0f, 0.0f, 0.5f, 0.5f,0.5f,0.5f,0.5f);
+    GraphicPrimitives::drawOutlinedRect2D(x, y, width, height, 0.5f, 0.5f, 0.5f);
 }
