@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "GraphicPrimitives.h"
+#include "Vaisseau.hpp"
 
 class Case{
     private:
@@ -18,10 +19,13 @@ class Case{
         float y;
         float width;
         float height;
+        Vaisseau *vaisseau = NULL;
     public:
         Case(float x, float y, float width, float height):x(x),y(y),width(width), height(height){}
+        Case(float x, float y, float width, float height, Vaisseau *vaisseau):x(x),y(y),width(width), height(height), vaisseau(vaisseau){}
         Case();
         void dessiner();
+        void ajouterVaisseau();
 };
 
 #endif /* Case_hpp */

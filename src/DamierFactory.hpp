@@ -19,5 +19,4 @@ class DamierFactory {
         static int nombreDeCases(const int lignes, const int colonnes);
 };
 
-
 #endif /* DamierFactory_hpp */
