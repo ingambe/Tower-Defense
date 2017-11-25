@@ -10,7 +10,9 @@
 
 void Vaisseau::dessiner(){
     compteur++;
-    std::cout << "compteur : " << compteur << std::endl;
+    if(compteur % temps == 0){
+        tirerMissile();
+    }
     float demi_width = width / 2;
     float demi_height = height / 2;
     GraphicPrimitives::drawFillTriangle2D(x + demi_width, y, x - demi_width, y + demi_height, x - demi_width, y - demi_height, 0.5f, 0.5f, 0.5f);
@@ -27,5 +29,12 @@ void Vaisseau::dessiner(){
 
 void Vaisseau::tirerMissile(){
     Missiles *iterMissiles = missiles;
-    
+    while(iterMissiles != NULL && iterMissiles->courant != NULL){
+        iterMissiles = iterMissiles->suivant;
+    }
+    if(iterMissiles == NULL){
+        iterMissiles = new Missiles(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
+    } else {
+        iterMissiles->courant = new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre);
+    }
 }

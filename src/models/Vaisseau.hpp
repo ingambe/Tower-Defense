@@ -33,7 +33,7 @@ class Vaisseau{
             missiles = new Missiles();
         };
         void dessiner();
-        void tirerMissile()
+        void tirerMissile();
 };
 
 #endif /* Vaisseau_hpp */
