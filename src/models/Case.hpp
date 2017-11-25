@@ -25,7 +25,7 @@ class Case{
         Case(float x, float y, float width, float height, Vaisseau *vaisseau):x(x),y(y),width(width), height(height), vaisseau(vaisseau){}
         Case();
         void dessiner();
-        void ajouterVaisseau();
+        void ajouterVaisseau(int width_fenetre, int height_fenetre);
 };
 
 #endif /* Case_hpp */

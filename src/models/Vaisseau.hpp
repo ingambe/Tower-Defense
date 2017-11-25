@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include "GraphicPrimitives.h"
+#include "Missile.hpp"
+#include "Missiles.hpp"
 
 class Vaisseau{
     private:
@@ -18,12 +20,20 @@ class Vaisseau{
         float y;
         float width;
         float height;
-        float frequence;
+        int temps;
         int puissance;
         int vitesse;
+        int width_fenetre;
+        int height_fenetre;
+        Missiles *missiles;
+        int compteur = 0;
     public:
-        Vaisseau(float x, float y, float width, float height, float frequence, int puissance, int vitesse):x(x), y(y), width(width), height(height), frequence(frequence), puissance(puissance), vitesse(vitesse){};
+        // temps = 1 / frequence
+        Vaisseau(float x, float y, float width, float height, float frequence, int puissance, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), width(width), height(height), temps(1 / frequence), puissance(puissance), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){
+            missiles = new Missiles();
+        };
         void dessiner();
+        void tirerMissile()
 };
 
 #endif /* Vaisseau_hpp */

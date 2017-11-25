@@ -19,7 +19,6 @@ void Case::dessiner(){
     }
 }
 
-void Case::ajouterVaisseau(){
-    std::cout << "y : " << y << std::endl;
-    vaisseau = new Vaisseau(x + (width / 2), -y - (height / 2), width / 2, height / 2, 1.0f, 1, 5);
+void Case::ajouterVaisseau(int width_fenetre, int height_fenetre){
+    vaisseau = new Vaisseau(x + (width / 2), -y - (height / 2), width / 2, height / 2, 1.0f, 1, 100, width_fenetre, height_fenetre);
 }

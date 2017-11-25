@@ -21,7 +21,9 @@
 		726ABAC21FBFB3B000388A93 /* TestDamierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC11FBFB3B000388A93 /* TestDamierFactory.cpp */; };
 		726ABAC71FBFB4EB00388A93 /* Case.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC61FBFB4EB00388A93 /* Case.cpp */; };
 		726ABACA1FBFB4FC00388A93 /* DamierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC81FBFB4FC00388A93 /* DamierFactory.cpp */; };
+		727444D51FC9A69A00C06B17 /* Missiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 727444D31FC9A69A00C06B17 /* Missiles.cpp */; };
 		72D45DB41FC626BC000C077A /* Vaisseau.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72D45DB21FC626BC000C077A /* Vaisseau.cpp */; };
+		72D45DB71FC63691000C077A /* Missile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72D45DB51FC63691000C077A /* Missile.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,8 +81,12 @@
 		726ABAC61FBFB4EB00388A93 /* Case.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Case.cpp; sourceTree = "<group>"; };
 		726ABAC81FBFB4FC00388A93 /* DamierFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DamierFactory.cpp; sourceTree = "<group>"; };
 		726ABAC91FBFB4FC00388A93 /* DamierFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DamierFactory.hpp; sourceTree = "<group>"; };
+		727444D31FC9A69A00C06B17 /* Missiles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Missiles.cpp; path = models/Missiles.cpp; sourceTree = "<group>"; };
+		727444D41FC9A69A00C06B17 /* Missiles.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Missiles.hpp; path = models/Missiles.hpp; sourceTree = "<group>"; };
 		72D45DB21FC626BC000C077A /* Vaisseau.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Vaisseau.cpp; path = models/Vaisseau.cpp; sourceTree = "<group>"; };
 		72D45DB31FC626BC000C077A /* Vaisseau.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Vaisseau.hpp; path = models/Vaisseau.hpp; sourceTree = "<group>"; };
+		72D45DB51FC63691000C077A /* Missile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Missile.cpp; path = models/Missile.cpp; sourceTree = "<group>"; };
+		72D45DB61FC63691000C077A /* Missile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Missile.hpp; path = models/Missile.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,10 @@
 				7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */,
 				72D45DB21FC626BC000C077A /* Vaisseau.cpp */,
 				72D45DB31FC626BC000C077A /* Vaisseau.hpp */,
+				72D45DB51FC63691000C077A /* Missile.cpp */,
+				72D45DB61FC63691000C077A /* Missile.hpp */,
+				727444D31FC9A69A00C06B17 /* Missiles.cpp */,
+				727444D41FC9A69A00C06B17 /* Missiles.hpp */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -290,7 +300,9 @@
 			files = (
 				2EFFA1061F89199500D3BA04 /* MyGraphicEngine.cpp in Sources */,
 				2EFFA1031F89199500D3BA04 /* main.cpp in Sources */,
+				727444D51FC9A69A00C06B17 /* Missiles.cpp in Sources */,
 				7208D5431FBC6AD8006F6F2A /* Case.cpp in Sources */,
+				72D45DB71FC63691000C077A /* Missile.cpp in Sources */,
 				2EFFA1011F89199500D3BA04 /* GraphicPrimitives.cpp in Sources */,
 				2EFFA1041F89199500D3BA04 /* MyControlEngine.cpp in Sources */,
 				7208D5401FBC6A84006F6F2A /* DamierFactory.cpp in Sources */,
