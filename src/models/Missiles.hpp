@@ -13,13 +13,13 @@
 #include "Missile.hpp"
 
 /*
- *  Représente une liste de missiles
+ *  Représente une file de missiles
  */
 class Missiles{
     public :
         // pointeur vers le missile courant
         Missile* courant;
-        // pointeur vers le reste de la liste de missiles
+        // pointeur vers le reste de la file de missiles
         Missiles* suivant;
         Missiles(Missile* missile);
         Missiles();
