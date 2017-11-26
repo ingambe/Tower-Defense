@@ -14,7 +14,7 @@ int main(int argc, char * argv[]){
     
     GraphicEngine* ge = new MyGraphicEngine(damier, nombre_de_case);
     ControlEngine* ce = new MyControlEngine(damier, lignes, colonnes);
-    GameEngine* gme = new MyGameEngine();
+    GameEngine* gme = new MyGameEngine(damier, nombre_de_case);
     e.setGraphicEngine(ge);
     e.setGameEngine(gme);
     e.setControlEngine(ce);

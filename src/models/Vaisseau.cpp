@@ -10,7 +10,8 @@
 
 void Vaisseau::dessiner(){
     compteur++;
-    if(compteur % temps == 0){
+    if(compteur % (temps * 100) == 0){
+        std::cout << " compteur : " << compteur << " temps : " << temps * 100 << std::endl;
         tirerMissile();
     }
     float demi_width = width / 2;
@@ -19,21 +20,17 @@ void Vaisseau::dessiner(){
     Missiles *iteration = missiles;
     while (iteration != NULL && iteration->courant != NULL) {
         iteration->courant->dessiner();
-        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && !(iteration->suivant->courant->isVisible())){
-            delete iteration->suivant;
-            iteration->suivant = NULL;
-        }
         iteration = iteration->suivant;
     }
 }
 
 void Vaisseau::tirerMissile(){
     Missiles *iterMissiles = missiles;
-    while(iterMissiles != NULL && iterMissiles->courant != NULL){
+    while(iterMissiles->suivant != NULL && iterMissiles->courant != NULL){
         iterMissiles = iterMissiles->suivant;
     }
-    if(iterMissiles == NULL){
-        iterMissiles = new Missiles(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
+    if(iterMissiles->suivant == NULL){
+        iterMissiles->suivant = new Missiles(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
     } else {
         iterMissiles->courant = new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre);
     }
