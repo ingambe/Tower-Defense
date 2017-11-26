@@ -16,5 +16,5 @@ void Missile::dessiner(){
 }
 
 bool Missile::isVisible(){
-    return x <= width_fenetre;
+    return x <= 1;
 }
