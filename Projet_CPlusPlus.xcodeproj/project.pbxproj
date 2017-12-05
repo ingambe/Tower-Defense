@@ -20,6 +20,7 @@
 		7208D5431FBC6AD8006F6F2A /* Case.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7208D5411FBC6AD8006F6F2A /* Case.cpp */; };
 		723BE2071FD757CF00ABE125 /* Asteroides.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723BE2051FD757CF00ABE125 /* Asteroides.cpp */; };
 		723BE20A1FD757DE00ABE125 /* Asteroide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723BE2081FD757DE00ABE125 /* Asteroide.cpp */; };
+		723BE20D1FD75E2D00ABE125 /* AsteroidesFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 723BE20B1FD75E2D00ABE125 /* AsteroidesFactory.cpp */; };
 		726ABAC21FBFB3B000388A93 /* TestDamierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC11FBFB3B000388A93 /* TestDamierFactory.cpp */; };
 		726ABAC71FBFB4EB00388A93 /* Case.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC61FBFB4EB00388A93 /* Case.cpp */; };
 		726ABACA1FBFB4FC00388A93 /* DamierFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726ABAC81FBFB4FC00388A93 /* DamierFactory.cpp */; };
@@ -83,6 +84,8 @@
 		723BE2061FD757CF00ABE125 /* Asteroides.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Asteroides.hpp; path = models/Asteroides.hpp; sourceTree = "<group>"; };
 		723BE2081FD757DE00ABE125 /* Asteroide.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Asteroide.cpp; path = models/Asteroide.cpp; sourceTree = "<group>"; };
 		723BE2091FD757DE00ABE125 /* Asteroide.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Asteroide.hpp; path = models/Asteroide.hpp; sourceTree = "<group>"; };
+		723BE20B1FD75E2D00ABE125 /* AsteroidesFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AsteroidesFactory.cpp; path = models/AsteroidesFactory.cpp; sourceTree = "<group>"; };
+		723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AsteroidesFactory.hpp; path = models/AsteroidesFactory.hpp; sourceTree = "<group>"; };
 		726ABAC11FBFB3B000388A93 /* TestDamierFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestDamierFactory.cpp; sourceTree = "<group>"; };
 		726ABAC51FBFB4EB00388A93 /* Case.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Case.hpp; sourceTree = "<group>"; };
 		726ABAC61FBFB4EB00388A93 /* Case.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Case.cpp; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				723BE2061FD757CF00ABE125 /* Asteroides.hpp */,
 				723BE2081FD757DE00ABE125 /* Asteroide.cpp */,
 				723BE2091FD757DE00ABE125 /* Asteroide.hpp */,
+				723BE20B1FD75E2D00ABE125 /* AsteroidesFactory.cpp */,
+				723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				2EFFA1011F89199500D3BA04 /* GraphicPrimitives.cpp in Sources */,
 				2EFFA1041F89199500D3BA04 /* MyControlEngine.cpp in Sources */,
 				7208D5401FBC6A84006F6F2A /* DamierFactory.cpp in Sources */,
+				723BE20D1FD75E2D00ABE125 /* AsteroidesFactory.cpp in Sources */,
 				72D45DB41FC626BC000C077A /* Vaisseau.cpp in Sources */,
 				2EFFA1051F89199500D3BA04 /* MyGameEngine.cpp in Sources */,
 			);
