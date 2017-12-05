@@ -10,7 +10,7 @@
 
 void Missile::dessiner(){
     GraphicPrimitives::drawLine2D(x, y, x + 0.1f, y, 0.5f, 0.5f, 0.5f);
-    x += 0.005f;
+    x += (vitesse / 1000.0);
 }
 
 bool Missile::isVisible(){

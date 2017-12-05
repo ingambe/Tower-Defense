@@ -10,5 +10,22 @@
 #define Asteroide_hpp
 
 #include <stdio.h>
+#include "GraphicPrimitives.h"
+
+class Asteroide {
+    private:
+        int vie;
+        float x;
+        float y;
+        int puissance;
+        int vitesse;
+        float perimetre;
+        int width_fenetre;
+        int height_fenetre;
+    public:
+        Asteroide(int vie, float x, float y, int puissance, int vitesse, float perimetre, int width_fenetre, int height_fenetre):vie(vie), x(x), y(y), puissance(puissance), vitesse(vitesse), perimetre(perimetre), width_fenetre(width_fenetre), height_fenetre(height_fenetre){};
+        void dessiner();
+        bool estVivant();
+};
 
 #endif /* Asteroide_hpp */

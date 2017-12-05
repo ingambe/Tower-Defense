@@ -7,3 +7,42 @@
 //
 
 #include "Asteroide.hpp"
+
+void Asteroide::dessiner(){
+    
+    std::vector<float> vectX;
+    std::vector<float> vectY;
+    
+    vectX.emplace_back(x);
+    vectY.emplace_back(y);
+    
+    vectX.emplace_back(x);
+    vectY.emplace_back(y + perimetre);
+    
+    vectX.emplace_back(x + perimetre);
+    vectY.emplace_back(y + perimetre + (2 * perimetre));
+    
+    vectX.emplace_back(x + perimetre);
+    vectY.emplace_back(y + perimetre);
+    
+    vectX.emplace_back(x + perimetre + (2 * perimetre));
+    vectY.emplace_back(y);
+    
+    vectX.emplace_back(x + perimetre);
+    vectY.emplace_back(y - perimetre);
+    
+    vectX.emplace_back(x + perimetre);
+    vectY.emplace_back(y - perimetre - (2 * perimetre));
+    
+    vectX.emplace_back(x);
+    vectY.emplace_back(y - perimetre);
+    
+    GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.5f, 0.5f, 0.5f);
+    
+    
+    
+}
+
+bool Asteroide::estVivant(){
+    return vie > 0;
+}

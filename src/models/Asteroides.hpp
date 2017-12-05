@@ -10,5 +10,16 @@
 #define Asteroides_hpp
 
 #include <stdio.h>
+#include "Asteroide.hpp"
+
+class Asteroides {
+    public:
+        Asteroide *courant;
+        Asteroides *suivant;
+        Asteroides(Asteroide* asteroide);
+        ~Asteroides();
+        Asteroides();
+        void ajouterAsteroide(Asteroide* aAjouter);
+};
 
 #endif /* Asteroides_hpp */
