@@ -17,15 +17,16 @@ class Asteroide {
         int vie;
         float x;
         float y;
-        int puissance;
+        int degat;
         int vitesse;
         float perimetre;
-        int width_fenetre;
-        int height_fenetre;
     public:
-        Asteroide(int vie, float x, float y, int puissance, int vitesse, float perimetre, int width_fenetre, int height_fenetre):vie(vie), x(x), y(y), puissance(puissance), vitesse(vitesse), perimetre(perimetre), width_fenetre(width_fenetre), height_fenetre(height_fenetre){};
+        Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre){};
         void dessiner();
         bool estVivant();
+        float getPerimetre();
+        float setX(float x);
+        float setY(float y);
 };
 
 #endif /* Asteroide_hpp */

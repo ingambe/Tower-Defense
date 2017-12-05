@@ -9,7 +9,6 @@
 #include "Asteroide.hpp"
 
 void Asteroide::dessiner(){
-    
     std::vector<float> vectX;
     std::vector<float> vectY;
     
@@ -45,4 +44,16 @@ void Asteroide::dessiner(){
 
 bool Asteroide::estVivant(){
     return vie > 0;
+}
+
+float Asteroide::getPerimetre(){
+    return perimetre;
+}
+
+float Asteroide::setX(float x){
+    this->x = x;
+}
+
+float Asteroide::setY(float y){
+    this->y = y;
 }
