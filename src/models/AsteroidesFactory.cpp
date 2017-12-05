@@ -36,10 +36,10 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     return new Asteroide(vie, x, y, degat, vitesse, perimetre);
 }
 
-Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int difficultee){
+Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficultee){
     Asteroide *asteroide = asteroideDifficultee(difficultee);
-    int x = 
-}
-Asteroide* AsteroidesFactory::creerAsteroide(int difficultee){
-    
+    int x = 1 + asteroide->getPerimetre();
+    asteroide->setX(x);
+    asteroide->setY(-1.0f + ((ligne - 1.0f) * (ligne / (lignes * 1.0f))) + (ligne / (lignes * 1.0f) / ligne));
+    return asteroide;
 }
