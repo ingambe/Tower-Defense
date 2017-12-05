@@ -44,3 +44,10 @@ void Vaisseau::tirerMissile(){
         missiles = nouveauElement;
     }
 }
+
+Vaisseau::~Vaisseau(){
+    if(missiles != NULL){
+        delete missiles;
+    }
+    missiles = NULL;
+}

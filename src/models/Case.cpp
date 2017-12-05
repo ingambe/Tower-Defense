@@ -8,10 +8,6 @@
 
 #include "Case.hpp"
 
-Case::Case(){
-    
-}
-
 void Case::dessiner(){
     GraphicPrimitives::drawOutlinedRect2D(x, y, width, height, 0.5f, 0.5f, 0.5f);
     if(vaisseau != NULL){
@@ -23,4 +19,11 @@ void Case::ajouterVaisseau(int width_fenetre, int height_fenetre){
     if(vaisseau == NULL){
         vaisseau = new Vaisseau(x + (width / 2), -y - (height / 2), width / 2, height / 2, 1.0f, 1, 100, width_fenetre, height_fenetre);
     }
+}
+
+Case::~Case(){
+    if(vaisseau != NULL){
+        delete vaisseau;
+    }
+    vaisseau = NULL;
 }

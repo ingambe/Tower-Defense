@@ -32,6 +32,7 @@ class Vaisseau{
         Vaisseau(float x, float y, float width, float height, float frequence, int puissance, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), width(width), height(height), temps(1 / frequence), puissance(puissance), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){
             missiles = new Missiles();
         };
+        ~Vaisseau();
         void dessiner();
         void tirerMissile();
 };
