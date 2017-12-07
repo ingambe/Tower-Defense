@@ -7,8 +7,8 @@
 
 int main(int argc, char * argv[]){
     Engine e(argc,argv);
-    const int lignes = 10;
-    const int colonnes = 10;
+    const int lignes = 2;
+    const int colonnes = 5;
     
     Damier* damier = DamierFactory().creerDamier(lignes, colonnes);
     int nombre_de_case = DamierFactory().nombreDeCases(lignes, colonnes);

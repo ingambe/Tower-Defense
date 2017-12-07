@@ -2,10 +2,8 @@
 
 
 void MyGameEngine::idle(){
-    /**
-    for(int i = 0; i < nombre_de_case; i++){
-        damier[i]->dessiner();
+    tics++;
+    if(tics % 100 == 0){
+        damier->ajouterAsteroide(AsteroidesFactory::creerAsteroide(0, damier->getNombreLignes(), 0));
     }
-    std::cout << "la" << std::endl;
-     **/
 }

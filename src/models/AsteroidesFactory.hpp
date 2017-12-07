@@ -14,9 +14,9 @@
 
 class AsteroidesFactory {
     private:
-        Asteroide* asteroideDifficultee(int difficultee);
+        static Asteroide* asteroideDifficultee(int difficultee);
     public :
-        Asteroide* creerAsteroide(int ligne, int lignes, int difficultee);
+        static Asteroide* creerAsteroide(int ligne, int lignes, int difficultee);
 };
 
 #endif /* AsteroidesFactory_hpp */

@@ -20,6 +20,7 @@ class Asteroide {
         int degat;
         int vitesse;
         float perimetre;
+    
     public:
         Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre){};
         void dessiner();

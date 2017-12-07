@@ -17,7 +17,7 @@
 class Damier {
     private:
         Case** cases;
-        Asteroides *asteroides;
+        Asteroides *asteroides = new Asteroides();
         int lignes;
         int colonnes;
     public:
@@ -26,6 +26,9 @@ class Damier {
         Case* recupererCase(int ligne, int colonne);
         Case* recupererCase(int numeroCase);
         void dessiner();
+        void ajouterAsteroide(Asteroide *asteroide);
+        int getNombreLignes();
+        int getNombreCollones();
 };
 
 #endif /* Damier_hpp */

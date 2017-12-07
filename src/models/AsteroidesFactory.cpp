@@ -18,16 +18,16 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     switch (difficultee) {
         case 1:
             vie = 3;
-            x = 0;
-            y= 0;
+            x = 0.0f;
+            y = 0.0f;
             degat = 2;
             vitesse = 7;
             perimetre = 0.25f;
             break;
         default:
             vie = 2;
-            x = 0;
-            y= 0;
+            x = 0.0f;
+            y = 0.0f;
             degat = 1;
             vitesse = 5;
             perimetre = 0.20f;
@@ -40,6 +40,8 @@ Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficul
     Asteroide *asteroide = asteroideDifficultee(difficultee);
     int x = 1 + asteroide->getPerimetre();
     asteroide->setX(x);
-    asteroide->setY(-1.0f + ((ligne - 1.0f) * (ligne / (lignes * 1.0f))) + (ligne / (lignes * 1.0f) / ligne));
+    float hauteurCase = -lignes / 2.0f;
+    // a modifier quand il y aura les cercles a la place des carrees
+    asteroide->setY((hauteurCase * ligne) + 1.0f + (hauteurCase / 2) - (asteroide->getPerimetre() / 2));
     return asteroide;
 }

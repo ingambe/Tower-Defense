@@ -48,3 +48,26 @@ void Damier::dessiner(){
         }
     }
 }
+
+/*
+ *  On ajoute un asteroide a la file des asteroides
+ */
+void Damier::ajouterAsteroide(Asteroide *asteroide){
+    // si c'est le premier asteroide a apparaitre
+    if(asteroides->courant == NULL){
+        asteroides->courant = asteroide;
+    } else {
+        // sinon on creer un nouvel element de la file
+        Asteroides *nouveauElement = new Asteroides(asteroide);
+        nouveauElement->suivant = asteroides;
+        asteroides = nouveauElement;
+    }
+}
+
+int Damier::getNombreLignes(){
+    return lignes;
+}
+
+int Damier::getNombreCollones(){
+    return colonnes;
+}

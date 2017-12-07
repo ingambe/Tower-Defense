@@ -9,6 +9,7 @@
 #include "Asteroide.hpp"
 
 void Asteroide::dessiner(){
+    /**
     std::vector<float> vectX;
     std::vector<float> vectY;
     
@@ -35,10 +36,13 @@ void Asteroide::dessiner(){
     
     vectX.emplace_back(x);
     vectY.emplace_back(y - perimetre);
-    
     GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.5f, 0.5f, 0.5f);
+     **/
+    GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
 
     x -= (vitesse / 1000.0);
+    std::cout << "x : " << x << std::endl;
+    std::cout << "y : " << y << std::endl;
     
 }
 
@@ -57,4 +61,3 @@ void Asteroide::setX(float x){
 void Asteroide::setY(float y){
     this->y = y;
 }
-
