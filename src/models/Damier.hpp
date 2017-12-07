@@ -11,11 +11,13 @@
 
 #include <stdio.h>
 #include "Case.hpp"
+#include "Asteroides.hpp"
 #include "DamierFactory.hpp"
 
 class Damier {
     private:
         Case** cases;
+        Asteroides *asteroides;
         int lignes;
         int colonnes;
     public:
@@ -23,6 +25,7 @@ class Damier {
         ~Damier();
         Case* recupererCase(int ligne, int colonne);
         Case* recupererCase(int numeroCase);
+        void dessiner();
 };
 
 #endif /* Damier_hpp */

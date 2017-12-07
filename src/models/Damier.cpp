@@ -28,3 +28,23 @@ Case* Damier::recupererCase(int ligne, int colonne){
 Case* Damier::recupererCase(int numeroCase){
     return cases[numeroCase];
 }
+
+void Damier::dessiner(){
+    // on dessine chaque case du damier
+    for(int i = 0; i < lignes * colonnes; i++){
+        cases[i]->dessiner();
+    }
+    // on parcour la liste des asteroides pour les dessiner un a un
+    Asteroides *iteration = asteroides;
+    while (iteration != NULL && iteration->courant != NULL) {
+        iteration->courant->dessiner();
+        // si l'element suivant n'est plus visible alors on le delete
+        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && !(iteration->suivant->courant->estVivant())){
+            Asteroides* suivantSuivant = iteration->suivant->suivant;
+            delete iteration->suivant;
+            iteration->suivant = suivantSuivant;
+        } else {
+            iteration = iteration->suivant;
+        }
+    }
+}

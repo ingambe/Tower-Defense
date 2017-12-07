@@ -57,3 +57,4 @@ void Asteroide::setX(float x){
 void Asteroide::setY(float y){
     this->y = y;
 }
+
