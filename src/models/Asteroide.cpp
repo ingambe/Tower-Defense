@@ -41,8 +41,6 @@ void Asteroide::dessiner(){
     GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
 
     x -= (vitesse / 1000.0);
-    std::cout << "x : " << x << std::endl;
-    std::cout << "y : " << y << std::endl;
     
 }
 
@@ -60,4 +58,23 @@ void Asteroide::setX(float x){
 
 void Asteroide::setY(float y){
     this->y = y;
+}
+
+/**
+ *  Fonction qui converti un y en numero de ligne
+ **/
+int Asteroide::yToLigne(float y, int lignes){
+    int hauteurCase = 2.0f / lignes;
+    int compteur = 0;
+    for(float k = 1.0f; k > -1.0f; k = k - hauteurCase){
+        if(y <= k && y >= k - hauteurCase){
+            return compteur;
+        }
+        compteur++;
+    }
+    return lignes - 1;
+}
+
+bool Asteroide::colision(Missile *missile, int lignes){
+    return missile->getX() >= this->x && (yToLigne(missile->getY(), lignes) == yToLigne(this->y, lignes));
 }

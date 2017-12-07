@@ -27,3 +27,10 @@ Case::~Case(){
     }
     vaisseau = NULL;
 }
+
+Missiles* Case::getMissiles(){
+    if(vaisseau != NULL){
+        return vaisseau->getMissiles();
+    }
+    return NULL;
+}

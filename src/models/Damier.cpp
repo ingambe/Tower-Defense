@@ -71,3 +71,57 @@ int Damier::getNombreLignes(){
 int Damier::getNombreCollones(){
     return colonnes;
 }
+
+/**
+ * Recupere tous les missiles des differents vaisseau du plateau et les fusionnes
+ **/
+Missiles* Damier::getMissilesCases(){
+    // le pointeur qui stockera les missiles
+    Missiles* resultat = new Missiles();
+    // le pointeur qu'on va modifier pour concatener les files de missiles
+    Missiles* copieIteration = resultat;
+    for(int i = 0; i < lignes * colonnes; i++){
+        if(recupererCase(i)->getMissiles() != NULL){
+            // on recupere les missiles de la case
+            copieIteration->suivant = recupererCase(i)->getMissiles();
+            // copie iteration devient le bout de la liste
+            while(copieIteration->suivant != NULL){
+                copieIteration = copieIteration->suivant;
+            }
+        }
+    }
+    // on renvoie le suivant le premier etant une coquille vide
+    return resultat->suivant;
+}
+
+// TODO : deporte cette focntion dans le moteur pour gerer les score et la monnaie
+void Damier::gererColisions(){
+    // gestions colisions avec missiles
+    Asteroides *iteration = asteroides;
+    Missiles *missiles = getMissilesCases();
+    while (iteration != NULL && iteration->courant != NULL) {
+        /**
+         * on creer une "coquille" vide sur le premier element des missiles
+         * cela permet de travailler sur les suivants et donc de supprimer un
+         * element beaucoup plus facilement
+         **/
+        Missiles *iterationMissiles = new Missiles();
+        iterationMissiles->suivant = missiles;
+        // on s'en fout de sauter le premier element, c'est une coquille vide
+        while (iterationMissiles != NULL && iterationMissiles->suivant != NULL && iterationMissiles->suivant->courant != NULL) {
+            /**
+             * On lui envoi le missile et le nombre de lignes dans le damier
+             * On rappel que le nombre de ligne sert a determiner la ligne ou se trouve
+             * Le missile et l'asteroide
+             **/
+            if(iteration->courant->colision(iterationMissiles->suivant->courant, lignes)){
+                Missiles *aSupprimer = iterationMissiles->suivant;
+                iterationMissiles->suivant = aSupprimer->suivant;
+                delete aSupprimer;
+                aSupprimer = NULL;
+            }
+            iterationMissiles = iterationMissiles->suivant;
+        }
+        iteration = iteration->suivant;
+    }
+}

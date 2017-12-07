@@ -51,3 +51,7 @@ Vaisseau::~Vaisseau(){
     }
     missiles = NULL;
 }
+
+Missiles* Vaisseau::getMissiles(){
+    return missiles;
+}

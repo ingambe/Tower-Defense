@@ -35,6 +35,7 @@ class Vaisseau{
         ~Vaisseau();
         void dessiner();
         void tirerMissile();
+        Missiles* getMissiles();
 };
 
 #endif /* Vaisseau_hpp */

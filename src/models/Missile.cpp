@@ -16,3 +16,11 @@ void Missile::dessiner(){
 bool Missile::isVisible(){
     return x <= 1;
 }
+
+float Missile::getX(){
+    return x;
+}
+
+float Missile::getY(){
+    return y;
+}

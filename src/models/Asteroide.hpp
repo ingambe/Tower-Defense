@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "GraphicPrimitives.h"
+#include "Missile.hpp"
 
 class Asteroide {
     private:
@@ -20,14 +21,17 @@ class Asteroide {
         int degat;
         int vitesse;
         float perimetre;
+        int yToLigne(float y, int lignes);
+        int scoreRapportee;
     
     public:
-        Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre){};
+        Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre, int scoreRapportee):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre), scoreRapportee(scoreRapportee){};
         void dessiner();
         bool estVivant();
         float getPerimetre();
         void setX(float x);
         void setY(float y);
+        bool colision(Missile *missile, int lignes);
 };
 
 #endif /* Asteroide_hpp */

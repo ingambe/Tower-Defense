@@ -27,6 +27,7 @@ class Case{
         ~Case();
         void dessiner();
         void ajouterVaisseau(int width_fenetre, int height_fenetre);
+        Missiles* getMissiles();
 };
 
 #endif /* Case_hpp */

@@ -20,6 +20,7 @@ class Damier {
         Asteroides *asteroides = new Asteroides();
         int lignes;
         int colonnes;
+        Missiles *getMissilesCases();
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
         ~Damier();
@@ -29,6 +30,7 @@ class Damier {
         void ajouterAsteroide(Asteroide *asteroide);
         int getNombreLignes();
         int getNombreCollones();
+        void gererColisions();
 };
 
 #endif /* Damier_hpp */
