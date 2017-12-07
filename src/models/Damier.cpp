@@ -20,3 +20,11 @@ Damier::~Damier(){
     }
     cases = NULL;
 }
+
+Case* Damier::recupererCase(int ligne, int colonne){
+    return cases[(ligne * colonne) - 1];
+}
+
+Case* Damier::recupererCase(int numeroCase){
+    return cases[numeroCase];
+}

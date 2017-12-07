@@ -11,11 +11,12 @@
 
 #include <stdio.h>
 #include "Case.hpp"
+#include "Damier.hpp"
 #include <iostream>
 
 class DamierFactory {
     public:
-        static Case** creerDamier(const int lignes, const int colonnes);
+        static Damier* creerDamier(const int lignes, const int colonnes);
         static int nombreDeCases(const int lignes, const int colonnes);
 };
 

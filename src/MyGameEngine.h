@@ -1,17 +1,16 @@
 #pragma once
-
 #include "Engine.h"
 #include "Case.hpp"
-
+#include "Damier.hpp"
 class MyGameEngine:public GameEngine {
     
 private:
-    Case** damier;
+    Damier* damier;
     int nombre_de_case;
     
 public:
     
-    MyGameEngine(Case** damier, int nombre_de_case):damier(damier), nombre_de_case(nombre_de_case){}
+    MyGameEngine(Damier* damier, int nombre_de_case):damier(damier), nombre_de_case(nombre_de_case){}
     
     virtual void idle();
     

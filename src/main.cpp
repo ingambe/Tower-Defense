@@ -1,4 +1,5 @@
 #include <iostream>
+#include "DamierFactory.hpp"
 #include "Engine.h"
 #include "MyGraphicEngine.h"
 #include "MyGameEngine.h"
@@ -6,10 +7,10 @@
 
 int main(int argc, char * argv[]){
     Engine e(argc,argv);
-    const int lignes = 1;
+    const int lignes = 10;
     const int colonnes = 10;
     
-    Case** damier = DamierFactory().creerDamier(lignes, colonnes);
+    Damier* damier = DamierFactory().creerDamier(lignes, colonnes);
     int nombre_de_case = DamierFactory().nombreDeCases(lignes, colonnes);
     
     GraphicEngine* ge = new MyGraphicEngine(damier, nombre_de_case);

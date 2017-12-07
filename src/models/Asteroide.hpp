@@ -25,8 +25,8 @@ class Asteroide {
         void dessiner();
         bool estVivant();
         float getPerimetre();
-        float setX(float x);
-        float setY(float y);
+        void setX(float x);
+        void setY(float y);
 };
 
 #endif /* Asteroide_hpp */

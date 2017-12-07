@@ -50,10 +50,10 @@ float Asteroide::getPerimetre(){
     return perimetre;
 }
 
-float Asteroide::setX(float x){
+void Asteroide::setX(float x){
     this->x = x;
 }
 
-float Asteroide::setY(float y){
+void Asteroide::setY(float y){
     this->y = y;
 }

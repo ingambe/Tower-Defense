@@ -8,18 +8,18 @@
 
 #include "DamierFactory.hpp"
 
-Case** DamierFactory::creerDamier(int lignes, int colonnes){
+Damier* DamierFactory::creerDamier(int lignes, int colonnes){
     Case** cases = new Case*[nombreDeCases(lignes, colonnes)];
-    float largeur = 2.0f / (colonnes + 1);
-    float hauteur = 2.0f / (lignes + 1);
-    for(int ligne = 0; ligne <= lignes; ligne++){
-        for(int colonne = 0; colonne <= colonnes; colonne++){
-            cases[(ligne * (colonnes + 1)) + colonne] = new Case(-1.0f + (colonne * largeur), -1.0f + (ligne * hauteur), largeur, hauteur);
+    float largeur = 2.0f / colonnes;
+    float hauteur = 2.0f / lignes;
+    for(int ligne = 0; ligne < lignes; ligne++){
+        for(int colonne = 0; colonne < colonnes; colonne++){
+            cases[(ligne * colonnes) + colonne] = new Case(-1.0f + (colonne * largeur), -1.0f + (ligne * hauteur), largeur, hauteur);
         }
     }
-    return cases;
+    return new Damier(cases, lignes, colonnes);
 }
 
 int DamierFactory::nombreDeCases(int lignes, int colonnes){
-    return (lignes + 1) * (colonnes + 1);
+    return lignes * colonnes;
 }

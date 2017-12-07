@@ -21,6 +21,8 @@ class Damier {
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
         ~Damier();
+        Case* recupererCase(int ligne, int colonne);
+        Case* recupererCase(int numeroCase);
 };
 
 #endif /* Damier_hpp */
