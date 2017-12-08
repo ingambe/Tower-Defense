@@ -33,6 +33,7 @@ class Asteroide {
         float getX();
         void setY(float y);
         bool colision(Missile *missile, int lignes);
+        void degatMissile(int degat);
 };
 
 #endif /* Asteroide_hpp */

@@ -29,6 +29,7 @@ class Missile{
         float getY();
         void collision();
         bool isASupprimer();
+        int getDegat();
 };
 
 #endif /* Missile_hpp */

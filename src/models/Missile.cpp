@@ -32,3 +32,7 @@ void Missile::collision(){
 bool Missile::isASupprimer(){
     return !isVisible() ||colision;
 }
+
+int Missile::getDegat(){
+    return degat;
+}

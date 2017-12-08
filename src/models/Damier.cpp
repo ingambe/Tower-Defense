@@ -116,12 +116,10 @@ void Damier::gererColisions(){
              **/
             if(iteration->courant->colision(iterationMissiles->suivant->courant, lignes)){
                 Missiles *aSupprimer = iterationMissiles->suivant;
-                iterationMissiles->suivant = aSupprimer->suivant;
                 aSupprimer->courant->collision();
+                iteration->courant->degatMissile(iterationMissiles->suivant->courant->getDegat());
+                iterationMissiles->suivant = aSupprimer->suivant;
                 aSupprimer = NULL;
-            }
-            if(iterationMissiles->suivant != NULL && iterationMissiles->suivant->courant != NULL && iteration->courant != NULL){
-            std::cout << "x missile : " << iterationMissiles->suivant->courant->getX() << " x asteroide : " << iteration->courant->getX() << std::endl;
             }
             iterationMissiles = iterationMissiles->suivant;
         }

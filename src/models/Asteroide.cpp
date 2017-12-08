@@ -45,7 +45,7 @@ void Asteroide::dessiner(){
 }
 
 bool Asteroide::estVivant(){
-    return vie > 0;
+    return vie > 0 || x <= -1;
 }
 
 float Asteroide::getPerimetre(){
@@ -81,4 +81,8 @@ int Asteroide::yToLigne(float y, int lignes){
 
 bool Asteroide::colision(Missile *missile, int lignes){
     return missile->getX() >= this->x && (yToLigne(missile->getY(), lignes) == yToLigne(this->y, lignes));
+}
+
+void Asteroide::degatMissile(int degat){
+    vie = vie - degat;
 }
