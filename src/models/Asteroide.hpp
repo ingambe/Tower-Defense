@@ -30,6 +30,7 @@ class Asteroide {
         bool estVivant();
         float getPerimetre();
         void setX(float x);
+        float getX();
         void setY(float y);
         bool colision(Missile *missile, int lignes);
 };

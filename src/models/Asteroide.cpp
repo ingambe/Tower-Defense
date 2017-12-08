@@ -56,6 +56,10 @@ void Asteroide::setX(float x){
     this->x = x;
 }
 
+float Asteroide::getX(){
+    return x;
+}
+
 void Asteroide::setY(float y){
     this->y = y;
 }

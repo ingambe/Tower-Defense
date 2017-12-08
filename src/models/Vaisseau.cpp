@@ -22,7 +22,7 @@ void Vaisseau::dessiner(){
     while (iteration != NULL && iteration->courant != NULL) {
         iteration->courant->dessiner();
         // si l'element suivant n'est plus visible alors on le delete
-        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && !(iteration->suivant->courant->isVisible())){
+        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && iteration->suivant->courant->isASupprimer()){
             delete iteration->suivant;
             iteration->suivant = NULL;
         }
@@ -53,5 +53,8 @@ Vaisseau::~Vaisseau(){
 }
 
 Missiles* Vaisseau::getMissiles(){
+    if(missiles->courant == NULL){
+        return NULL;
+    }
     return missiles;
 }

@@ -18,14 +18,17 @@ class Missile{
         float y;
         int degat;
         int vitesse;
-        int width_fenetre;
-        int height_fenetre;
+        bool colision;
+    
     public:
-        Missile(float x, float y, int degat, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), degat(degat), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){};
+        Missile(float x, float y, int degat, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), degat(degat), vitesse(vitesse), colision(false){};
+        const float width_missile = 0.1f;
         void dessiner();
         bool isVisible();
         float getX();
         float getY();
+        void collision();
+        bool isASupprimer();
 };
 
 #endif /* Missile_hpp */

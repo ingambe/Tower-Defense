@@ -9,7 +9,7 @@
 #include "Missile.hpp"
 
 void Missile::dessiner(){
-    GraphicPrimitives::drawLine2D(x, y, x + 0.1f, y, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawLine2D(x, y, x + width_missile, y, 0.5f, 0.5f, 0.5f);
     x += (vitesse / 1000.0);
 }
 
@@ -23,4 +23,12 @@ float Missile::getX(){
 
 float Missile::getY(){
     return y;
+}
+
+void Missile::collision(){
+    colision = true;
+}
+
+bool Missile::isASupprimer(){
+    return !isVisible() ||colision;
 }
