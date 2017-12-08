@@ -14,7 +14,7 @@ void Missile::dessiner(){
 }
 
 bool Missile::isVisible(){
-    return x <= 1;
+    return x <= 1.0f;
 }
 
 float Missile::getX(){

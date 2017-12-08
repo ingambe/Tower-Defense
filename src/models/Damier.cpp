@@ -116,10 +116,12 @@ void Damier::gererColisions(){
              **/
             if(iteration->courant->colision(iterationMissiles->suivant->courant, lignes)){
                 Missiles *aSupprimer = iterationMissiles->suivant;
+                // si il y a eu colision, on enleve une fois les degats du missile a l'asteroide
+                if(!aSupprimer->courant->isASupprimer()){
+                    iteration->courant->degatMissile(iterationMissiles->suivant->courant->getDegat());
+                }
                 aSupprimer->courant->collision();
-                iteration->courant->degatMissile(iterationMissiles->suivant->courant->getDegat());
                 iterationMissiles->suivant = aSupprimer->suivant;
-                aSupprimer = NULL;
             }
             iterationMissiles = iterationMissiles->suivant;
         }

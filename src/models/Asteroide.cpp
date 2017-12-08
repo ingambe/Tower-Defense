@@ -45,7 +45,7 @@ void Asteroide::dessiner(){
 }
 
 bool Asteroide::estVivant(){
-    return vie > 0 || x <= -1;
+    return vie > 0 && x >= -1.0f;
 }
 
 float Asteroide::getPerimetre(){
