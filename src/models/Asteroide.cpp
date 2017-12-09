@@ -97,3 +97,7 @@ int Asteroide::getLigne(int lignes){
 int Asteroide::getDegat(){
     return degat;
 }
+
+void Asteroide::tuer(){
+    vie = 0;
+}

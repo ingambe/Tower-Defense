@@ -36,6 +36,7 @@ class Asteroide {
         void degatMissile(int degat);
         int getLigne(int lignes);
         int getDegat();
+        void tuer();
 };
 
 #endif /* Asteroide_hpp */
