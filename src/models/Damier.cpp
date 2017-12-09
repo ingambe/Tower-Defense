@@ -69,6 +69,10 @@ int Damier::getNombreCollones(){
     return colonnes;
 }
 
+bool Damier::colisionAvecBord(Asteroide* asteroide){
+    return asteroide->getX() <= -1.0f;
+}
+
 /**
  * Fonction de gestion de la colision
  * On parcours les asteroides
@@ -85,6 +89,15 @@ void Damier::gererColisions(){
         int ligne = courant->getLigne(lignes);
         for(int i = 0; i < colonnes; i++){
              recupererCase(ligne, i)->colision(courant, lignes);
+        }
+        /**
+         *  Gestion colision bord ecran (vie joueur)
+         **/
+        if(colisionAvecBord(courant)){
+            vieJoueur = vieJoueur - 1;
+            // on tue l'asteroide
+            courant->tuer();
+            std::cout << "vie enleve : " << vieJoueur << std::endl;
         }
         iteration->push(courant);
         asteroides->pop();

@@ -61,7 +61,9 @@ void Case::colision(Asteroide* asteroide, int lignes){
          * Gestion colision vaisseaux :
          **/
         if(vaisseau->colisionAsteroide(asteroide)){
+            // on retire de la vie au vaisseau
             vaisseau->retirerVie(asteroide->getDegat());
+            // on tue l'asteroide
             asteroide->tuer();
             if(vaisseau->getVie() <= 0){
                 delete vaisseau;

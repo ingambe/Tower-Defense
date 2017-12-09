@@ -16,11 +16,14 @@
 #include "Asteroide.hpp"
 
 class Damier {
+    
     private:
         Case** cases;
         std::queue<Asteroide*>* asteroides = new std::queue<Asteroide*>();
         int lignes;
         int colonnes;
+        int vieJoueur = 3;
+    
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
         ~Damier();
@@ -31,6 +34,8 @@ class Damier {
         int getNombreLignes();
         int getNombreCollones();
         void gererColisions();
+        bool colisionAvecBord(Asteroide *asteroide);
+    
 };
 
 #endif /* Damier_hpp */
