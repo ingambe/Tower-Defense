@@ -23,9 +23,10 @@ class Asteroide {
         float perimetre;
         int yToLigne(float y, int lignes);
         int scoreRapportee;
+        int argent;
     
     public:
-        Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre, int scoreRapportee):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre), scoreRapportee(scoreRapportee){};
+        Asteroide(int vie, float x, float y, int degat, int vitesse, float perimetre, int scoreRapportee, int argent):vie(vie), x(x), y(y), degat(degat), vitesse(vitesse), perimetre(perimetre), scoreRapportee(scoreRapportee), argent(argent){};
         void dessiner();
         bool estVivant();
         float getPerimetre();
@@ -37,6 +38,8 @@ class Asteroide {
         int getLigne(int lignes);
         int getDegat();
         void tuer();
+        int getScore();
+        int getArgent();
 };
 
 #endif /* Asteroide_hpp */

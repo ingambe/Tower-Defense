@@ -101,3 +101,11 @@ int Asteroide::getDegat(){
 void Asteroide::tuer(){
     vie = 0;
 }
+
+int Asteroide::getScore(){
+    return scoreRapportee;
+}
+
+int Asteroide::getArgent(){
+    return argent;
+}

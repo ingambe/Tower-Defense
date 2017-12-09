@@ -23,6 +23,8 @@ class Damier {
         int lignes;
         int colonnes;
         int vieJoueur = 3;
+        int scoreJoueur = 0;
+        int argentJoueur = 0;
     
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
@@ -35,7 +37,9 @@ class Damier {
         int getNombreCollones();
         void gererColisions();
         bool colisionAvecBord(Asteroide *asteroide);
-    
+        bool partieFinie();
+        void augmenterScoreJoueur(int ajouter);
+        int getScoreJoueur();
 };
 
 #endif /* Damier_hpp */

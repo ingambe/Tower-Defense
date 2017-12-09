@@ -44,6 +44,8 @@ void Damier::dessiner(){
             iteration->push(asteroides->front());
         } else {
             if(asteroides->front() != NULL){
+                scoreJoueur += asteroides->front()->getScore();
+                argentJoueur += asteroides->front()->getArgent();
                 delete asteroides->front();
             }
         }
@@ -97,7 +99,6 @@ void Damier::gererColisions(){
             vieJoueur = vieJoueur - 1;
             // on tue l'asteroide
             courant->tuer();
-            std::cout << "vie enleve : " << vieJoueur << std::endl;
         }
         iteration->push(courant);
         asteroides->pop();
@@ -106,4 +107,12 @@ void Damier::gererColisions(){
         delete asteroides;
     }
     asteroides = iteration;
+}
+
+bool Damier::partieFinie(){
+    return vieJoueur <= 0;
+}
+
+int Damier::getScoreJoueur(){
+    return scoreJoueur;
 }

@@ -16,6 +16,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     int vitesse;
     float perimetre;
     int score;
+    int argent;
     switch (difficultee) {
         case 1:
             vie = 3;
@@ -24,7 +25,8 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             degat = 2;
             vitesse = 7;
             perimetre = 0.25f;
-            score = 1;
+            score = 2;
+            argent = 2;
             break;
         default:
             vie = 2;
@@ -33,10 +35,11 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             degat = 1;
             vitesse = 5;
             perimetre = 0.20f;
-            score = 2;
+            score = 1;
+            argent = 1;
             break;
     }
-    return new Asteroide(vie, x, y, degat, vitesse, perimetre, score);
+    return new Asteroide(vie, x, y, degat, vitesse, perimetre, score, argent);
 }
 
 Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficultee){
