@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "GraphicPrimitives.h"
 #include "Vaisseau.hpp"
+#include "Asteroide.hpp"
 
 class Case{
     private:
@@ -27,7 +28,7 @@ class Case{
         ~Case();
         void dessiner();
         void ajouterVaisseau(int width_fenetre, int height_fenetre);
-        Missiles* getMissiles();
+        void colision(Asteroide* asteroide, int lignes);
 };
 
 #endif /* Case_hpp */

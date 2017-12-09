@@ -17,32 +17,31 @@ void Vaisseau::dessiner(){
         tirerMissile();
     }
     compteur++;
-    // on parcour la liste des missiles pour les dessiner un a un
-    Missiles *iteration = missiles;
-    while (iteration != NULL && iteration->courant != NULL) {
-        iteration->courant->dessiner();
-        // si l'element suivant n'est plus visible alors on le delete
-        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && iteration->suivant->courant->isASupprimer()){
-            delete iteration->suivant;
-            iteration->suivant = NULL;
+    // file qui gardera les missiles a ne pas supprimer
+    std::queue<Missile*>* iteration = new std::queue<Missile*>();
+    // on parcour la files des missiles pour les dessiner un a un
+    while (!missiles->empty()) {
+        if(!missiles->front()->isASupprimer()){
+            missiles->front()->dessiner();
+            iteration->push(missiles->front());
+        } else {
+            if(missiles->front() != NULL){
+                delete missiles->front();
+            }
         }
-        iteration = iteration->suivant;
+        missiles->pop();
     }
+    if(missiles != NULL){
+        delete missiles;
+    }
+    missiles = iteration;
 }
 
 /*
  *  On ajoute un missile a la file des missiles
  */
 void Vaisseau::tirerMissile(){
-    // si c'est le premier missile tiree
-    if(missiles->courant == NULL){
-        missiles->courant = new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre);
-    } else {
-        // sinon on creer un nouvel element de la file
-        Missiles *nouveauElement = new Missiles(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
-        nouveauElement->suivant = missiles;
-        missiles = nouveauElement;
-    }
+    missiles->push(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
 }
 
 Vaisseau::~Vaisseau(){
@@ -52,9 +51,22 @@ Vaisseau::~Vaisseau(){
     missiles = NULL;
 }
 
-Missiles* Vaisseau::getMissiles(){
-    if(missiles->courant == NULL){
-        return NULL;
-    }
+std::queue<Missile*>* Vaisseau::getMissiles(){
     return missiles;
+}
+
+void Vaisseau::setMissiles(std::queue<Missile*>* missiles){
+    this->missiles = missiles;
+}
+
+bool Vaisseau::colisionAsteroide(Asteroide* asteroide){
+    return asteroide->getX() <= x + width / 2;
+}
+
+void Vaisseau::retirerVie(int degat){
+    vie = vie - degat;
+}
+
+int Vaisseau::getVie(){
+    return vie;
 }

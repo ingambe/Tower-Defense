@@ -22,7 +22,7 @@ Damier::~Damier(){
 }
 
 Case* Damier::recupererCase(int ligne, int colonne){
-    return cases[(ligne * colonne) - 1];
+    return cases[(ligne * colonnes) + colonne];
 }
 
 Case* Damier::recupererCase(int numeroCase){
@@ -34,34 +34,31 @@ void Damier::dessiner(){
     for(int i = 0; i < lignes * colonnes; i++){
         cases[i]->dessiner();
     }
-    // on parcour la liste des asteroides pour les dessiner un a un
-    Asteroides *iteration = asteroides;
-    while (iteration != NULL && iteration->courant != NULL) {
-        iteration->courant->dessiner();
-        // si l'element suivant n'est plus visible alors on le delete
-        if(iteration->suivant != NULL && iteration->suivant->courant != NULL && !(iteration->suivant->courant->estVivant())){
-            Asteroides* suivantSuivant = iteration->suivant->suivant;
-            delete iteration->suivant;
-            iteration->suivant = suivantSuivant;
+    // on fait comme pour la file des missiles
+    // file qui gardera les asteroide a ne pas supprimer
+    std::queue<Asteroide*>* iteration = new std::queue<Asteroide*>();
+    // on parcour la files des asteroides pour les dessiners un a un
+    while (!asteroides->empty()) {
+        if(asteroides->front()->estVivant()){
+            asteroides->front()->dessiner();
+            iteration->push(asteroides->front());
         } else {
-            iteration = iteration->suivant;
+            if(asteroides->front() != NULL){
+                delete asteroides->front();
+            }
         }
+        asteroides->pop();
     }
+    if(asteroides != NULL){
+        delete asteroides;
+    }
+    asteroides = iteration;
 }
-
 /*
  *  On ajoute un asteroide a la file des asteroides
  */
 void Damier::ajouterAsteroide(Asteroide *asteroide){
-    // si c'est le premier asteroide a apparaitre
-    if(asteroides->courant == NULL){
-        asteroides->courant = asteroide;
-    } else {
-        // sinon on creer un nouvel element de la file
-        Asteroides *nouveauElement = new Asteroides(asteroide);
-        nouveauElement->suivant = asteroides;
-        asteroides = nouveauElement;
-    }
+    asteroides->push(asteroide);
 }
 
 int Damier::getNombreLignes(){
@@ -73,59 +70,27 @@ int Damier::getNombreCollones(){
 }
 
 /**
- * Recupere tous les missiles des differents vaisseau du plateau et les fusionnes
+ * Fonction de gestion de la colision
+ * On parcours les asteroides
+ * On recupere la ligne de l'asteroide
+ * On parcours toutes les cases de la ligne
+ * Et on leur passe l'asteroide pour qu'il gere une eventielle colision
  **/
-Missiles* Damier::getMissilesCases(){
-    // le pointeur qui stockera les missiles
-    Missiles* resultat = new Missiles();
-    // le pointeur qu'on va modifier pour concatener les files de missiles
-    Missiles* copieIteration = resultat;
-    for(int i = 0; i < lignes * colonnes; i++){
-        if(recupererCase(i)->getMissiles() != NULL){
-            // on recupere les missiles de la case
-            copieIteration->suivant = recupererCase(i)->getMissiles();
-            // copie iteration devient le bout de la liste
-            while(copieIteration->suivant != NULL){
-                copieIteration = copieIteration->suivant;
-            }
-        }
-    }
-    // on renvoie le suivant le premier etant une coquille vide
-    return resultat->suivant;
-}
-
-// TODO : deporte cette focntion dans le moteur pour gerer les score et la monnaie
 void Damier::gererColisions(){
-    // gestions colisions avec missiles
-    Asteroides *iteration = asteroides;
-    Missiles *missiles = getMissilesCases();
-    while (iteration != NULL && iteration->courant != NULL) {
-        /**
-         * on creer une "coquille" vide sur le premier element des missiles
-         * cela permet de travailler sur les suivants et donc de supprimer un
-         * element beaucoup plus facilement
-         **/
-        Missiles *iterationMissiles = new Missiles();
-        iterationMissiles->suivant = missiles;
-        // on s'en fout de sauter le premier element, c'est une coquille vide
-        while (iterationMissiles != NULL && iterationMissiles->suivant != NULL && iterationMissiles->suivant->courant != NULL) {
-            /**
-             * On lui envoi le missile et le nombre de lignes dans le damier
-             * On rappel que le nombre de ligne sert a determiner la ligne ou se trouve
-             * Le missile et l'asteroide
-             **/
-            if(iteration->courant->colision(iterationMissiles->suivant->courant, lignes)){
-                Missiles *aSupprimer = iterationMissiles->suivant;
-                // si il y a eu colision, on enleve une fois les degats du missile a l'asteroide
-                if(!aSupprimer->courant->isASupprimer()){
-                    iteration->courant->degatMissile(iterationMissiles->suivant->courant->getDegat());
-                }
-                aSupprimer->courant->collision();
-                iterationMissiles->suivant = aSupprimer->suivant;
-            }
-            iterationMissiles = iterationMissiles->suivant;
+    // file qui gardera les asteroide a ne pas supprimer
+    std::queue<Asteroide*>* iteration = new std::queue<Asteroide*>();
+    while (!asteroides->empty()) {
+        Asteroide* courant = asteroides->front();
+        // on recupere la ligne
+        int ligne = courant->getLigne(lignes);
+        for(int i = 0; i < colonnes; i++){
+             recupererCase(ligne, i)->colision(courant, lignes);
         }
-        iteration = iteration->suivant;
+        iteration->push(courant);
+        asteroides->pop();
     }
-    
+    if(asteroides != NULL){
+        delete asteroides;
+    }
+    asteroides = iteration;
 }

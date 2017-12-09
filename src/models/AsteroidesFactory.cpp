@@ -18,7 +18,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     int score;
     switch (difficultee) {
         case 1:
-            vie = 30;
+            vie = 3;
             x = 0.0f;
             y = 0.0f;
             degat = 2;
@@ -27,7 +27,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             score = 1;
             break;
         default:
-            vie = 20;
+            vie = 2;
             x = 0.0f;
             y = 0.0f;
             degat = 1;

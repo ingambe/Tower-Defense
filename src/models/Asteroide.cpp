@@ -86,3 +86,14 @@ bool Asteroide::colision(Missile *missile, int lignes){
 void Asteroide::degatMissile(int degat){
     vie = vie - degat;
 }
+
+/**
+ *  Renvoi la ligne ou se trouve l'asteroide
+ **/
+int Asteroide::getLigne(int lignes){
+    return yToLigne(y, lignes);
+}
+
+int Asteroide::getDegat(){
+    return degat;
+}

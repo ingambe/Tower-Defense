@@ -11,16 +11,16 @@
 
 #include <stdio.h>
 #include "Case.hpp"
-#include "Asteroides.hpp"
+#include <queue>
 #include "DamierFactory.hpp"
+#include "Asteroide.hpp"
 
 class Damier {
     private:
         Case** cases;
-        Asteroides *asteroides = new Asteroides();
+        std::queue<Asteroide*>* asteroides = new std::queue<Asteroide*>();
         int lignes;
         int colonnes;
-        Missiles *getMissilesCases();
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
         ~Damier();

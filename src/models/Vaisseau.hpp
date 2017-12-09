@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include "GraphicPrimitives.h"
 #include "Missile.hpp"
-#include "Missiles.hpp"
+#include <queue>
+#include "Asteroide.hpp"
 
 class Vaisseau{
     private:
@@ -20,22 +21,28 @@ class Vaisseau{
         float y;
         float width;
         float height;
+        int vie;
         int temps;
         int puissance;
         int vitesse;
         int width_fenetre;
         int height_fenetre;
-        Missiles *missiles;
+        std::queue<Missile*>* missiles;
         int compteur = 0;
+    
     public:
         // temps = 1 / frequence
-        Vaisseau(float x, float y, float width, float height, float frequence, int puissance, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), width(width), height(height), temps(1 / frequence), puissance(puissance), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){
-            missiles = new Missiles();
+        Vaisseau(float x, float y, float width, float height, int vie, float frequence, int puissance, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), width(width), height(height), vie(vie), temps(1 / frequence), puissance(puissance), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){
+            missiles = new std::queue<Missile*>();
         };
         ~Vaisseau();
         void dessiner();
         void tirerMissile();
-        Missiles* getMissiles();
+        std::queue<Missile*>* getMissiles();
+        void setMissiles(std::queue<Missile*>* missiles);
+        bool colisionAsteroide(Asteroide* asteroide);
+        void retirerVie(int degat);
+        int getVie();
 };
 
 #endif /* Vaisseau_hpp */

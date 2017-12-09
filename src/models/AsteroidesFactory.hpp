@@ -10,7 +10,7 @@
 #define AsteroidesFactory_hpp
 
 #include <stdio.h>
-#include "Asteroides.hpp"
+#include "Asteroide.hpp"
 
 class AsteroidesFactory {
     private:
