@@ -25,15 +25,15 @@ class Damier {
         int colonnes;
         int vieJoueur = 3;
         int scoreJoueur = 0;
-        int argentJoueur = 0;
+        int argentJoueur = 10;
         int vaisseauSelectionneJoueur = 0;
         void drawSelecteurVaisseau();
+        Case* recupererCase(int ligne, int colonne);
+        Case* recupererCase(int numeroCase);
     
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
         ~Damier();
-        Case* recupererCase(int ligne, int colonne);
-        Case* recupererCase(int numeroCase);
         void dessiner();
         void ajouterAsteroide(Asteroide *asteroide);
         int getNombreLignes();
