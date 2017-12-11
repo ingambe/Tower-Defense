@@ -15,9 +15,9 @@ void Case::dessiner(){
     }
 }
 
-void Case::ajouterVaisseau(int width_fenetre, int height_fenetre){
+void Case::ajouterVaisseau(){
     if(vaisseau == NULL){
-        vaisseau = new Vaisseau(x + (width / 2), -y - height, width / 2, height / 2, 3, 1.0f, 1, 5, width_fenetre, height_fenetre);
+        vaisseau = new Vaisseau(x + (width / 2), -y - height, width / 2, height / 2, 3, 1.0f, 1, 5);
     }
 }
 

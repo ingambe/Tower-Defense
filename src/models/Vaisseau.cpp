@@ -41,7 +41,7 @@ void Vaisseau::dessiner(){
  *  On ajoute un missile a la file des missiles
  */
 void Vaisseau::tirerMissile(){
-    missiles->push(new Missile(x + width / 2, y, puissance, vitesse, width_fenetre, height_fenetre));
+    missiles->push(new Missile(x + width / 2, y, puissance, vitesse));
 }
 
 Vaisseau::~Vaisseau(){

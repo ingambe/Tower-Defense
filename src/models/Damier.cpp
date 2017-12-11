@@ -191,6 +191,38 @@ void Damier::setVaisseauSelectionne(int selection){
     vaisseauSelectionneJoueur = selection;
 }
 
+/**
+ * Fonction utilise pour ajouter un vaisseau et reduire l'argent du joueur
+ *  Renvoi faux si le joueur n'a pas assez d'argent pour poser le vaisseau
+ **/
+bool Damier::ajouterVaisseauCase(int caseSelectionne){
+    bool assezArgent = false;
+    switch (vaisseauSelectionneJoueur) {
+        case 1:
+            assezArgent = argentJoueur >= 5;
+            if(assezArgent){
+                argentJoueur = argentJoueur - 5;
+                recupererCase(caseSelectionne)->ajouterVaisseau();
+            }
+            break;
+        case 2:
+            assezArgent = argentJoueur >= 10;
+            if(assezArgent){
+                argentJoueur = argentJoueur - 10;
+                recupererCase(caseSelectionne)->ajouterVaisseau();
+            }
+            break;
+        default:
+            assezArgent = argentJoueur >= 3;
+            if(assezArgent){
+                argentJoueur = argentJoueur - 3;
+                recupererCase(caseSelectionne)->ajouterVaisseau();
+            }
+            break;
+    }
+    return assezArgent;
+}
+
 /*
  *  On ajoute un asteroide a la file des asteroides
  */

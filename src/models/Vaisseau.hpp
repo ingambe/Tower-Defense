@@ -25,14 +25,12 @@ class Vaisseau{
         int temps;
         int puissance;
         int vitesse;
-        int width_fenetre;
-        int height_fenetre;
         std::queue<Missile*>* missiles;
         int compteur = 0;
     
     public:
         // temps = 1 / frequence
-        Vaisseau(float x, float y, float width, float height, int vie, float frequence, int puissance, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), width(width), height(height), vie(vie), temps(1 / frequence), puissance(puissance), vitesse(vitesse), width_fenetre(width_fenetre), height_fenetre(height_fenetre){
+        Vaisseau(float x, float y, float width, float height, int vie, float frequence, int puissance, int vitesse):x(x), y(y), width(width), height(height), vie(vie), temps(1 / frequence), puissance(puissance), vitesse(vitesse){
             missiles = new std::queue<Missile*>();
         };
         ~Vaisseau();

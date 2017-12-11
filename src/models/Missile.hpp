@@ -21,7 +21,7 @@ class Missile{
         bool colision;
     
     public:
-        Missile(float x, float y, int degat, int vitesse, int width_fenetre, int height_fenetre):x(x), y(y), degat(degat), vitesse(vitesse), colision(false){};
+        Missile(float x, float y, int degat, int vitesse):x(x), y(y), degat(degat), vitesse(vitesse), colision(false){};
         const float width_missile = 0.1f;
         void dessiner();
         bool isVisible();

@@ -46,6 +46,7 @@ class Damier {
         void modifieeVaisseauSelectionneJoueur(int vaisseau);
         int coordoneeChoixVaisseau(float x, float y);
         void setVaisseauSelectionne(int selection);
+        bool ajouterVaisseauCase(int caseSelectionne);
 };
 
 #endif /* Damier_hpp */

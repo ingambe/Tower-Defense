@@ -27,7 +27,7 @@ class Case{
         Case(){};
         ~Case();
         void dessiner();
-        void ajouterVaisseau(int width_fenetre, int height_fenetre);
+        void ajouterVaisseau();
         void colision(Asteroide* asteroide, int lignes);
 };
 
