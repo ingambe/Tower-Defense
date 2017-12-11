@@ -1,7 +1,6 @@
 #pragma once
 #include "Engine.h"
 #include "GraphicPrimitives.h"
-#include "Case.hpp"
 #include "Damier.hpp"
 #include "DamierFactory.hpp"
 

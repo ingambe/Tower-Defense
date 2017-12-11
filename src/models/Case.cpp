@@ -15,9 +15,9 @@ void Case::dessiner(){
     }
 }
 
-void Case::ajouterVaisseau(){
+void Case::ajouterVaisseau(int type){
     if(vaisseau == NULL){
-        vaisseau = new Vaisseau(x + (width / 2), -y - height, width / 2, height / 2, 3, 1.0f, 1, 5);
+        vaisseau = VaisseauFactory::creerVaisseau(x + (width / 2), -y - height, width / 2, height / 2, type);
     }
 }
 
@@ -71,4 +71,20 @@ void Case::colision(Asteroide* asteroide, int lignes){
             }
         }
     }
+}
+
+float Case::getX(){
+    return x;
+}
+
+float Case::getY(){
+    return y;
+}
+
+float Case::getWidth(){
+    return width;
+}
+
+float Case::getHeight(){
+    return height;
 }

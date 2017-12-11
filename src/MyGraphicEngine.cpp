@@ -14,9 +14,11 @@ void MyGraphicEngine::Draw(){
             delete[] stringScore;
         }
         stringScore = NULL;
+        /**
         if(damier != NULL){
             delete damier;
         }
         damier = NULL;
+         **/
     }
 }

@@ -149,11 +149,11 @@ void Damier::drawSelecteurVaisseau(){
     GraphicPrimitives::drawText2D(str2, 0.78f, 0.90f, 0.5f, 0.5f, 0.5f);
     GraphicPrimitives::drawText2D(str3, 0.78f, 0.85f, 0.5f, 0.5f, 0.5f);
     // pour l'argent, si on en a pas assez, on l'affiche en rouge
-    if(vaisseauSelectionneJoueur == 1 && argentJoueur < 3){
+    if(vaisseauSelectionneJoueur == 0 && argentJoueur < 3){
         GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
-    } else if (vaisseauSelectionneJoueur == 2 && argentJoueur < 3){
+    } else if (vaisseauSelectionneJoueur == 1 && argentJoueur < 5){
         GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
-    } else if (vaisseauSelectionneJoueur == 3 && argentJoueur < 3){
+    } else if (vaisseauSelectionneJoueur == 2 && argentJoueur < 10){
         GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
     } else {
         // sinon on l'affiche en vert
@@ -202,21 +202,21 @@ bool Damier::ajouterVaisseauCase(int caseSelectionne){
             assezArgent = argentJoueur >= 5;
             if(assezArgent){
                 argentJoueur = argentJoueur - 5;
-                recupererCase(caseSelectionne)->ajouterVaisseau();
+                recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }
             break;
         case 2:
             assezArgent = argentJoueur >= 10;
             if(assezArgent){
                 argentJoueur = argentJoueur - 10;
-                recupererCase(caseSelectionne)->ajouterVaisseau();
+                recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }
             break;
         default:
             assezArgent = argentJoueur >= 3;
             if(assezArgent){
                 argentJoueur = argentJoueur - 3;
-                recupererCase(caseSelectionne)->ajouterVaisseau();
+                recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }
             break;
     }

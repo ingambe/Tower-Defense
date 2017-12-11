@@ -30,7 +30,7 @@ class Vaisseau{
     
     public:
         // temps = 1 / frequence
-        Vaisseau(float x, float y, float width, float height, int vie, float frequence, int puissance, int vitesse):x(x), y(y), width(width), height(height), vie(vie), temps(1 / frequence), puissance(puissance), vitesse(vitesse){
+        Vaisseau(float x, float y, float width, float height, int vie, int temps, int puissance, int vitesse):x(x), y(y), width(width), height(height), vie(vie), temps(temps), puissance(puissance), vitesse(vitesse){
             missiles = new std::queue<Missile*>();
         };
         ~Vaisseau();
