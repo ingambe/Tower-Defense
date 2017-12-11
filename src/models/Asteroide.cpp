@@ -68,9 +68,9 @@ void Asteroide::setY(float y){
  *  Fonction qui converti un y en numero de ligne
  **/
 int Asteroide::yToLigne(float y, int lignes){
-    float hauteurCase = 2.0f / lignes;
+    float hauteurCase = 1.8f / lignes;
     int compteur = 0;
-    for(float k = 1.0f; k > -1.0f; k = k - hauteurCase){
+    for(float k = 0.8f; k > -1.0f; k = k - hauteurCase){
         // le premier cas c'est pour k allant de 1 a 0
         // le second cas est poru k allant de 0 a -1
         if((y <= k && y >= k - hauteurCase) || (y <= k && y >= k + hauteurCase)){

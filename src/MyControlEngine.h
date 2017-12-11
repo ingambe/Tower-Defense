@@ -2,6 +2,7 @@
 #include "Engine.h"
 #include "Case.hpp"
 #include "Damier.hpp"
+#include <math.h>
 
 class MyControlEngine:public ControlEngine {
     
