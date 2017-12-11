@@ -61,15 +61,14 @@ void Damier::dessiner(){
     // Le nombre de vies
     char* str = new char[50];
     if(vieJoueur > 1){
-        sprintf(str,"Vie : ");
-    } else {
-        
         sprintf(str,"Vies : ");
+    } else {
+        sprintf(str,"Vie : ");
     }
     for(int i = 0; i < vieJoueur; i++){
         sprintf(str, "%s *", str);
     }
-    GraphicPrimitives::drawText2D(str, -0.95f, 0.9f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.95f, 0.88f, 0.5f, 0.5f, 0.5f);
     if(str != NULL){
         delete[] str;
     }
@@ -79,7 +78,18 @@ void Damier::dessiner(){
     str = new char[50];
     sprintf(str,"Score : ");
     sprintf(str, "%s %d", str, scoreJoueur);
-    GraphicPrimitives::drawText2D(str, -0.1f, 0.9f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.45f, 0.88f, 0.5f, 0.5f, 0.5f);
+    if(str != NULL){
+        delete[] str;
+    }
+    str = NULL;
+    
+    
+    // l'argent du joueur
+    str = new char[50];
+    sprintf(str,"Argent : ");
+    sprintf(str, "%s %d", str, argentJoueur);
+    GraphicPrimitives::drawText2D(str, 0.05f, 0.88f, 0.5f, 0.5f, 0.5f);
     if(str != NULL){
         delete[] str;
     }
