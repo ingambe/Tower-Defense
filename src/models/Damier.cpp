@@ -107,6 +107,41 @@ void Damier::drawSelecteurVaisseau(){
             GraphicPrimitives::drawOutlinedRect2D(0.48f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
             break;
     }
+    // on affiche les infos sur le vaisseau
+    
+    // une string par ligne d'information
+    char* str1 = new char[50];
+    char* str2 = new char[50];
+    char* str3 = new char[50];
+    char* str4 = new char[50];
+    switch(vaisseauSelectionneJoueur){
+        case 1:
+            sprintf(str1, "degat : %d", 2);
+            sprintf(str1, "vitesse : %d", 2);
+            sprintf(str1, "vie : %d", 3);
+            sprintf(str1, "cout : %d", 10);
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
+    if(str1 != NULL){
+        delete[] str1;
+    }
+    str1 = NULL;
+    if(str2 != NULL){
+        delete[] str2;
+    }
+    str2 = NULL;
+    if(str3 != NULL){
+        delete[] str3;
+    }
+    str3 = NULL;
+    if(str4 != NULL){
+        delete[] str4;
+    }
+    str4 = NULL;
 }
 
 int Damier::coordoneeChoixVaisseau(float x, float y){
