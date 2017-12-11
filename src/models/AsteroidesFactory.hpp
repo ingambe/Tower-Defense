@@ -16,6 +16,7 @@ class AsteroidesFactory {
     private:
         static Asteroide* asteroideDifficultee(int difficultee);
     public :
+        static int nombreTypesVaisseaux;
         static Asteroide* creerAsteroide(int ligne, int lignes, int difficultee);
 };
 

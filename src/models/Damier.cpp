@@ -55,7 +55,74 @@ void Damier::dessiner(){
         delete asteroides;
     }
     asteroides = iteration;
+    
+    // On dessine enssuite les informations utile a l'utilisateur
+    
+    // Le nombre de vies
+    char* str = new char[50];
+    if(vieJoueur > 1){
+        sprintf(str,"Vie : ");
+    } else {
+        
+        sprintf(str,"Vies : ");
+    }
+    for(int i = 0; i < vieJoueur; i++){
+        sprintf(str, "%s *", str);
+    }
+    GraphicPrimitives::drawText2D(str, -0.95f, 0.9f, 0.5f, 0.5f, 0.5f);
+    if(str != NULL){
+        delete[] str;
+    }
+    str = NULL;
+    
+    // le score
+    str = new char[50];
+    sprintf(str,"Score : ");
+    sprintf(str, "%s %d", str, scoreJoueur);
+    GraphicPrimitives::drawText2D(str, -0.1f, 0.9f, 0.5f, 0.5f, 0.5f);
+    if(str != NULL){
+        delete[] str;
+    }
+    str = NULL;
+    
+    drawSelecteurVaisseau();
 }
+
+/**
+ *  Fonction qui permet de dessiner les selecteurs de vaisseaux
+ **/
+void Damier::drawSelecteurVaisseau(){
+    for(int i = 0; i < AsteroidesFactory::nombreTypesVaisseaux; i++){
+        GraphicPrimitives::drawFillTriangle2D(0.55f + (i * 0.1f), 0.90f, 0.50f + (i * 0.1f), 0.85f, 0.50f + (i * 0.1f), 0.95f, 0.5f, 0.5f, 0.5);
+    }
+    // on dessine un rectangle autour du vaisseau selectionnee
+    switch (vaisseauSelectionneJoueur) {
+        case 1:
+            GraphicPrimitives::drawOutlinedRect2D(0.58f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            break;
+        case 2:
+            GraphicPrimitives::drawOutlinedRect2D(0.68f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            break;
+        default:
+            GraphicPrimitives::drawOutlinedRect2D(0.48f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            break;
+    }
+}
+
+int Damier::coordoneeChoixVaisseau(float x, float y){
+    if(x >= 0.48f && x <= 0.57f && y >= 0.85f && y <= 0.95f){
+        return 0;
+    } else if(x >= 0.57f && x <= 0.67f && y >= 0.85f && y <= 0.95f){
+        return 1;
+    } else {
+        return 2;
+    }
+}
+
+void Damier::setVaisseauSelectionne(int selection){
+    vaisseauSelectionneJoueur = selection;
+}
+
 /*
  *  On ajoute un asteroide a la file des asteroides
  */

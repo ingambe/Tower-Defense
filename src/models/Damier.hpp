@@ -13,6 +13,7 @@
 #include "Case.hpp"
 #include <queue>
 #include "DamierFactory.hpp"
+#include "AsteroidesFactory.hpp"
 #include "Asteroide.hpp"
 
 class Damier {
@@ -25,6 +26,8 @@ class Damier {
         int vieJoueur = 3;
         int scoreJoueur = 0;
         int argentJoueur = 0;
+        int vaisseauSelectionneJoueur = 0;
+        void drawSelecteurVaisseau();
     
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
@@ -40,6 +43,9 @@ class Damier {
         bool partieFinie();
         void augmenterScoreJoueur(int ajouter);
         int getScoreJoueur();
+        void modifieeVaisseauSelectionneJoueur(int vaisseau);
+        int coordoneeChoixVaisseau(float x, float y);
+        void setVaisseauSelectionne(int selection);
 };
 
 #endif /* Damier_hpp */

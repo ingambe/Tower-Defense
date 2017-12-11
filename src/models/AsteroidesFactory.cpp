@@ -8,6 +8,8 @@
 
 #include "AsteroidesFactory.hpp"
 
+int AsteroidesFactory::nombreTypesVaisseaux = 3;
+
 Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     int vie;
     float x;

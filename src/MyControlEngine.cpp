@@ -5,8 +5,9 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
         int caseCliquee = caseCoordonees(x,y);
         if(caseCliquee < (lignes * colonnes) && caseCliquee != -1){
             damier->recupererCase(caseCliquee)->ajouterVaisseau(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT));
-        } else if(caseCliquee == 1){
-            std::cout << "Click bandeau d'info" << std::endl;
+        } else if(caseCliquee == -1){
+            int choixVaisseau = damier->coordoneeChoixVaisseau(2.0f * ((1.0f * x) / glutGet(GLUT_WINDOW_WIDTH)) - 1.0f, 2.0f * ((1.0f * -y) / glutGet(GLUT_WINDOW_HEIGHT)) + 1.0f);
+            damier->setVaisseauSelectionne(choixVaisseau);
         } else {
             std::cerr << "Probleme lors du click, out of range" << std::endl;
         }
@@ -21,7 +22,6 @@ int MyControlEngine::caseCoordonees(const int x, const int y){
     if(y < yDebutDamier){
         return -1;
     }
-    
     int hauteurCase = (hauteurFenetre - yDebutDamier)/ lignes;
     int largeurCase = largeurFenetre / colonnes;
     int ligneCase = (y - yDebutDamier) / hauteurCase;
