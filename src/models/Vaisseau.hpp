@@ -29,6 +29,8 @@ class Vaisseau{
         std::queue<Missile*>* missiles;
         int compteur = 0;
         Couleur couleur;
+        // sert a l'assombrissement des vaisseaux lors de la reception de degats
+        int degatSubit = 0;
     
     public:
         // temps = 1 / frequence

@@ -8,9 +8,9 @@
 
 #include "Couleur.hpp"
 
-Couleur Couleur::bleue(0.0f, 0.0f, 1.0f);
+Couleur Couleur::bleue(0.1f, 0.1f, 1.0f);
 Couleur Couleur::blanc(1.0f, 1.0f, 1.0f);
-Couleur Couleur::rouge(1.0f, 0.0f, 0.0f);
+Couleur Couleur::rouge(1.0f, 0.1f, 0.1f);
 
 float Couleur::getRed(){
     return red;
