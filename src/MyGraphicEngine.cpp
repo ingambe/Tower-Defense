@@ -6,7 +6,7 @@ void MyGraphicEngine::Draw(){
     if(!damier->partieFinie()){
         damier->dessiner();
         if(damier->vagueFinie()){
-            GraphicPrimitives::drawText2D("Appuyer sur k pour lancer une nouvelle vague", -0.3f, 0.0f, 0.5f, 0.5f, 0.5f);
+            GraphicPrimitives::drawText2D("Appuyer sur Entree pour lancer une nouvelle vague", -0.5f, 0.0f, 1.0f, 1.0f, 1.0f);
         }
     } else {
         GraphicPrimitives::drawText2D("Partie Finie", -0.15f, 0.0f, 0.5f, 1.0f, 1.0f, 1.0f);

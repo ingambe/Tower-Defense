@@ -15,7 +15,7 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 }
 
 void MyControlEngine::KeyboardCallback(unsigned char key,int x, int y){
-    if(damier->vagueFinie() && !damier->partieFinie() && key == 'k'){
+    if(damier->vagueFinie() && !damier->partieFinie() && key == '\r'){
         damier->incrementerVague();
     }
 }
