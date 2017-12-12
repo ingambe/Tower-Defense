@@ -102,8 +102,20 @@ void Damier::dessiner(){
  *  Fonction qui permet de dessiner les selecteurs de vaisseaux
  **/
 void Damier::drawSelecteurVaisseau(){
+    Couleur couleur;
     for(int i = 0; i < AsteroidesFactory::nombreTypesVaisseaux; i++){
-        GraphicPrimitives::drawFillTriangle2D(0.55f + (i * 0.1f), 0.90f, 0.50f + (i * 0.1f), 0.85f, 0.50f + (i * 0.1f), 0.95f, 0.5f, 0.5f, 0.5);
+        switch (i) {
+            case 1:
+                couleur = Couleur::blanc;
+                break;
+            case 2:
+                couleur = Couleur::rouge;
+                break;
+            default:
+                couleur = Couleur::bleue;
+                break;
+        }
+        GraphicPrimitives::drawFillTriangle2D(0.55f + (i * 0.1f), 0.90f, 0.50f + (i * 0.1f), 0.85f, 0.50f + (i * 0.1f), 0.95f, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
     }
     // on dessine un rectangle autour du vaisseau selectionnee
     switch (vaisseauSelectionneJoueur) {

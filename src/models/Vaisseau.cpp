@@ -11,7 +11,7 @@
 void Vaisseau::dessiner(){
     float demi_width = width / 2;
     float demi_height = height / 2;
-    GraphicPrimitives::drawFillTriangle2D(x + demi_width, y, x - demi_width, y + demi_height, x - demi_width, y - demi_height, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawFillTriangle2D(x + demi_width, y, x - demi_width, y + demi_height, x - demi_width, y - demi_height, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
     // temps en seconde, compteur incremente toute les 0,01s
     if(compteur % (temps * 10) == 0){
         tirerMissile();

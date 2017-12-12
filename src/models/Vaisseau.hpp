@@ -14,6 +14,7 @@
 #include "Missile.hpp"
 #include <queue>
 #include "Asteroide.hpp"
+#include "Couleur.hpp"
 
 class Vaisseau{
     private:
@@ -27,10 +28,11 @@ class Vaisseau{
         int vitesse;
         std::queue<Missile*>* missiles;
         int compteur = 0;
+        Couleur couleur;
     
     public:
         // temps = 1 / frequence
-        Vaisseau(float x, float y, float width, float height, int vie, int temps, int puissance, int vitesse):x(x), y(y), width(width), height(height), vie(vie), temps(temps), puissance(puissance), vitesse(vitesse){
+        Vaisseau(float x, float y, float width, float height, int vie, int temps, int puissance, int vitesse, Couleur couleur):x(x), y(y), width(width), height(height), vie(vie), temps(temps), puissance(puissance), vitesse(vitesse), couleur(couleur){
             missiles = new std::queue<Missile*>();
         };
         ~Vaisseau();
