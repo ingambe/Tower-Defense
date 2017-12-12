@@ -304,8 +304,12 @@ void Damier::incrementerVague(){
     }
 }
 
+bool Damier::plusAsteroide(){
+    return asteroides->empty();
+}
+
 bool Damier::vagueFinie(){
-    return vague->vagueFinie();
+    return vague->vagueFinie() && plusAsteroide();
 }
 
 void Damier::gererVague(){

@@ -63,3 +63,7 @@ void Vague::incrementerVague(){
     nbAsteroideRestantCreer = 5 * vagueNumero +  (rand() % vagueNumero);
     interval = floor(100 / (2 * vagueNumero));
 }
+
+int Vague::getNumeroVague(){
+    return vagueNumero;
+}

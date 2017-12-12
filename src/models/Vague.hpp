@@ -34,6 +34,7 @@ public:
     Asteroide* creerAsteroide();
     bool vagueFinie();
     void incrementerVague();
+    int getNumeroVague();
 };
 
 #endif /* Vague_hpp */
