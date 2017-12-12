@@ -9,7 +9,7 @@
 #include "Case.hpp"
 
 void Case::dessiner(){
-    GraphicPrimitives::drawOutlinedRect2D(x, y, width, height, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawOutlinedRect2D(x, y, width, height, 1.0f, 1.0f, 1.0f);
     if(vaisseau != NULL){
         vaisseau->dessiner();
     }

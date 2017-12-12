@@ -68,7 +68,7 @@ void Damier::dessiner(){
     for(int i = 0; i < vieJoueur; i++){
         sprintf(str, "%s *", str);
     }
-    GraphicPrimitives::drawText2D(str, -0.95f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.95f, 0.88f, 1.0f, 1.0f, 1.0f);
     if(str != NULL){
         delete[] str;
     }
@@ -78,7 +78,7 @@ void Damier::dessiner(){
     str = new char[50];
     sprintf(str,"Score : ");
     sprintf(str, "%s %d", str, scoreJoueur);
-    GraphicPrimitives::drawText2D(str, -0.55f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.55f, 0.88f, 1.0f, 1.0f, 1.0f);
     if(str != NULL){
         delete[] str;
     }
@@ -89,7 +89,7 @@ void Damier::dessiner(){
     str = new char[50];
     sprintf(str,"Vague : ");
     sprintf(str, "%s %d", str, vague->getNumeroVague());
-    GraphicPrimitives::drawText2D(str, -0.15f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.15f, 0.88f, 1.0f, 1.0f, 1.0f);
     if(str != NULL){
         delete[] str;
     }
@@ -99,7 +99,7 @@ void Damier::dessiner(){
     str = new char[50];
     sprintf(str,"Argent : ");
     sprintf(str, "%s %d", str, argentJoueur);
-    GraphicPrimitives::drawText2D(str, 0.20f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, 0.20f, 0.88f, 1.0f, 1.0f, 1.0f);
     if(str != NULL){
         delete[] str;
     }
@@ -130,13 +130,13 @@ void Damier::drawSelecteurVaisseau(){
     // on dessine un rectangle autour du vaisseau selectionnee
     switch (vaisseauSelectionneJoueur) {
         case 1:
-            GraphicPrimitives::drawOutlinedRect2D(0.58f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            GraphicPrimitives::drawOutlinedRect2D(0.58f, 0.85f, 0.09f, 0.1f, 1.0f, 1.0f, 1.0f);
             break;
         case 2:
-            GraphicPrimitives::drawOutlinedRect2D(0.68f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            GraphicPrimitives::drawOutlinedRect2D(0.68f, 0.85f, 0.09f, 0.1f, 1.0f, 1.0f, 1.0f);
             break;
         default:
-            GraphicPrimitives::drawOutlinedRect2D(0.48f, 0.85f, 0.09f, 0.1f, 0.5f, 0.5f, 0.5f);
+            GraphicPrimitives::drawOutlinedRect2D(0.48f, 0.85f, 0.09f, 0.1f, 1.0f, 1.0f, 1.0f);
             break;
     }
     // on affiche les infos sur le vaisseau
@@ -167,9 +167,9 @@ void Damier::drawSelecteurVaisseau(){
             break;
     }
     // On les affiches en suite a droite de la selection
-    GraphicPrimitives::drawText2D(str1, 0.78f, 0.95f, 0.5f, 0.5f, 0.5f);
-    GraphicPrimitives::drawText2D(str2, 0.78f, 0.90f, 0.5f, 0.5f, 0.5f);
-    GraphicPrimitives::drawText2D(str3, 0.78f, 0.85f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str1, 0.78f, 0.95f, 1.0f, 1.0f, 1.0f);
+    GraphicPrimitives::drawText2D(str2, 0.78f, 0.90f, 1.0f, 1.0f, 1.0f);
+    GraphicPrimitives::drawText2D(str3, 0.78f, 0.85f, 1.0f, 1.0f, 1.0f);
     // pour l'argent, si on en a pas assez, on l'affiche en rouge
     if(vaisseauSelectionneJoueur == 0 && argentJoueur < 3){
         GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
