@@ -9,7 +9,8 @@
 #include "Missile.hpp"
 
 void Missile::dessiner(){
-    GraphicPrimitives::drawLine2D(x, y, x + width_missile, y, 0.5f, 0.5f, 0.5f);
+    // les missiles deviennent plus gros si ils causent beaucoup de degats
+    GraphicPrimitives::drawLine2D(x, y, x + width_missile + (0.02f * degat), y, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
     x += (vitesse / 1000.0);
 }
 

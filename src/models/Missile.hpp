@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "GraphicPrimitives.h"
+#include "Couleur.hpp"
 
 class Missile{
     private:
@@ -19,10 +20,11 @@ class Missile{
         int degat;
         int vitesse;
         bool colision;
+        Couleur couleur;
     
     public:
-        Missile(float x, float y, int degat, int vitesse):x(x), y(y), degat(degat), vitesse(vitesse), colision(false){};
-        const float width_missile = 0.1f;
+        Missile(float x, float y, int degat, int vitesse, Couleur couleur):x(x), y(y), degat(degat), vitesse(vitesse), colision(false), couleur(couleur){};
+        const float width_missile = 0.05f;
         void dessiner();
         bool isVisible();
         float getX();
