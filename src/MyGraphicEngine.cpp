@@ -6,7 +6,6 @@ void MyGraphicEngine::Draw(){
     if(!damier->partieFinie()){
         damier->dessiner();
         if(damier->vagueFinie()){
-            std::cout << "la" << std::endl;
             GraphicPrimitives::drawText2D("Appuyer sur k pour lancer une nouvelle vague", -0.3f, 0.0f, 0.5f, 0.5f, 0.5f);
         }
     } else {

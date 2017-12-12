@@ -51,10 +51,10 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
 Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficultee){
     float hauteurCase = 1.8f / lignes;
     Asteroide *asteroide = asteroideDifficultee(difficultee);
-    int x = 1 + asteroide->getPerimetre();
+    float x = 1.0f + asteroide->getPerimetre();
     asteroide->setX(x);
     // a modifier quand il y aura les cercles a la place des carrees
-    asteroide->setY(0.8f + (-hauteurCase * ligne) + (-hauteurCase / 2));
+    asteroide->setY(0.6f - (ligne * hauteurCase) - (hauteurCase / 2.0f)+ (asteroide->getPerimetre() / 2.0f));
     return asteroide;
 }
 

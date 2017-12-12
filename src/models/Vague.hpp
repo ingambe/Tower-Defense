@@ -26,7 +26,7 @@ private:
     int lignes;
     
 public:
-    Vague(int lignes){
+    Vague(int lignes):lignes(lignes){
         srand(time(NULL));
         nbAsteroideRestantCreer = 5 * vagueNumero +  (rand() % vagueNumero);
         interval = floor(100 / (2 * vagueNumero));
