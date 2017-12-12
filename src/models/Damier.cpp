@@ -78,18 +78,28 @@ void Damier::dessiner(){
     str = new char[50];
     sprintf(str,"Score : ");
     sprintf(str, "%s %d", str, scoreJoueur);
-    GraphicPrimitives::drawText2D(str, -0.45f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, -0.55f, 0.88f, 0.5f, 0.5f, 0.5f);
     if(str != NULL){
         delete[] str;
     }
     str = NULL;
     
     
+    // le numero de vague
+    str = new char[50];
+    sprintf(str,"Vague : ");
+    sprintf(str, "%s %d", str, vague->getNumeroVague());
+    GraphicPrimitives::drawText2D(str, -0.15f, 0.88f, 0.5f, 0.5f, 0.5f);
+    if(str != NULL){
+        delete[] str;
+    }
+    str = NULL;
+    
     // l'argent du joueur
     str = new char[50];
     sprintf(str,"Argent : ");
     sprintf(str, "%s %d", str, argentJoueur);
-    GraphicPrimitives::drawText2D(str, 0.05f, 0.88f, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawText2D(str, 0.20f, 0.88f, 0.5f, 0.5f, 0.5f);
     if(str != NULL){
         delete[] str;
     }

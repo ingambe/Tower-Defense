@@ -26,7 +26,7 @@ class Damier {
         int colonnes;
         int vieJoueur = 3;
         int scoreJoueur = 0;
-        int argentJoueur = 10;
+        int argentJoueur;
         int vaisseauSelectionneJoueur = 0;
         void drawSelecteurVaisseau();
         Case* recupererCase(int ligne, int colonne);
@@ -36,6 +36,7 @@ class Damier {
     public:
         Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){
             vague = new Vague(colonnes);
+            argentJoueur = 3 * lignes;
         }
         ~Damier();
         void dessiner();
