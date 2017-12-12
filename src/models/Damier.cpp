@@ -239,7 +239,9 @@ bool Damier::ajouterVaisseauCase(int caseSelectionne){
  *  On ajoute un asteroide a la file des asteroides
  */
 void Damier::ajouterAsteroide(Asteroide *asteroide){
-    asteroides->push(asteroide);
+    if(asteroide != NULL){
+        asteroides->push(asteroide);
+    }
 }
 
 int Damier::getNombreLignes(){
@@ -294,4 +296,18 @@ bool Damier::partieFinie(){
 
 int Damier::getScoreJoueur(){
     return scoreJoueur;
+}
+
+void Damier::incrementerVague(){
+    if(vague->vagueFinie()){
+        vague->incrementerVague();
+    }
+}
+
+bool Damier::vagueFinie(){
+    return vague->vagueFinie();
+}
+
+void Damier::gererVague(){
+    ajouterAsteroide(vague->creerAsteroide());
 }

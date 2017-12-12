@@ -15,6 +15,7 @@
 #include "DamierFactory.hpp"
 #include "AsteroidesFactory.hpp"
 #include "Asteroide.hpp"
+#include "Vague.hpp"
 
 class Damier {
     
@@ -30,9 +31,12 @@ class Damier {
         void drawSelecteurVaisseau();
         Case* recupererCase(int ligne, int colonne);
         Case* recupererCase(int numeroCase);
+        Vague* vague;
     
     public:
-        Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){};
+        Damier(Case** cases, int lignes, int colonnes):cases(cases), lignes(lignes), colonnes(colonnes){
+            vague = new Vague(colonnes);
+        }
         ~Damier();
         void dessiner();
         void ajouterAsteroide(Asteroide *asteroide);
@@ -47,6 +51,9 @@ class Damier {
         int coordoneeChoixVaisseau(float x, float y);
         void setVaisseauSelectionne(int selection);
         bool ajouterVaisseauCase(int caseSelectionne);
+        void incrementerVague();
+        bool vagueFinie();
+        void gererVague();
 };
 
 #endif /* Damier_hpp */

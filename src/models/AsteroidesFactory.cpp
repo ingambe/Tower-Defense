@@ -12,8 +12,8 @@ int AsteroidesFactory::nombreTypesVaisseaux = 3;
 
 Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     int vie;
-    float x;
-    float y;
+    float x = 0.0f;
+    float y = 0.0f;
     int degat;
     int vitesse;
     float perimetre;
@@ -21,19 +21,23 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     int argent;
     switch (difficultee) {
         case 1:
-            vie = 3;
-            x = 0.0f;
-            y = 0.0f;
+            vie = 4;
             degat = 2;
             vitesse = 7;
             perimetre = 0.25f;
             score = 2;
             argent = 2;
             break;
+        case 2:
+            vie = 8;
+            degat = 4;
+            vitesse = 9;
+            perimetre = 0.3f;
+            score = 4;
+            argent = 3;
+            break;
         default:
             vie = 2;
-            x = 0.0f;
-            y = 0.0f;
             degat = 1;
             vitesse = 5;
             perimetre = 0.20f;
@@ -45,10 +49,10 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
 }
 
 Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficultee){
+    float hauteurCase = 1.8f / lignes;
     Asteroide *asteroide = asteroideDifficultee(difficultee);
     int x = 1 + asteroide->getPerimetre();
     asteroide->setX(x);
-    float hauteurCase = 1.8f / lignes;
     // a modifier quand il y aura les cercles a la place des carrees
     asteroide->setY(0.8f + (-hauteurCase * ligne) + (-hauteurCase / 2) - (asteroide->getPerimetre() / 2));
     return asteroide;

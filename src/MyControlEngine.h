@@ -15,4 +15,5 @@ private:
 public:
     MyControlEngine(Damier* damier, int lignes, int colonnes):damier(damier),lignes(lignes),colonnes(colonnes){}
     virtual void MouseCallback(int button, int state, int x, int y) ;
+    virtual void KeyboardCallback(unsigned char key,int x, int y);
 };

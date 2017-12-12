@@ -14,6 +14,12 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
     }
 }
 
+void MyControlEngine::KeyboardCallback(unsigned char key,int x, int y){
+    if(damier->vagueFinie() && !damier->partieFinie() && key == '\n'){
+        damier->incrementerVague();
+    }
+}
+
 int MyControlEngine::caseCoordonees(const int x, const int y){
     int hauteurFenetre = glutGet(GLUT_WINDOW_HEIGHT);
     int largeurFenetre = glutGet(GLUT_WINDOW_WIDTH);
