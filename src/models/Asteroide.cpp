@@ -38,8 +38,6 @@ void Asteroide::dessiner(){
     vectY.emplace_back(y - perimetre);
     GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.5f, 0.5f, 0.5f);
      **/
-    std::cout << "x " << x << std::endl;
-    std::cout << "y " << y << std::endl;
     GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
 
     x -= (vitesse / 1000.0);
