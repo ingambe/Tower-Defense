@@ -9,36 +9,38 @@
 #include "Asteroide.hpp"
 
 void Asteroide::dessiner(){
-    /**
+
     std::vector<float> vectX;
     std::vector<float> vectY;
     
-    vectX.emplace_back(x);
-    vectY.emplace_back(y);
+    vectX.emplace_back(x + (perimetre / 3.0f));
+    vectY.emplace_back(y + (perimetre / 2.0f));
     
-    vectX.emplace_back(x);
-    vectY.emplace_back(y + perimetre);
+    vectX.emplace_back(x + (perimetre / 2.0f));
+    vectY.emplace_back(y + (perimetre / 3.0f));
     
-    vectX.emplace_back(x + perimetre);
-    vectY.emplace_back(y + perimetre + (2 * perimetre));
+    vectX.emplace_back(x + (perimetre / 2.5f));
+    vectY.emplace_back(y - (perimetre / 3.0f));
     
-    vectX.emplace_back(x + perimetre);
-    vectY.emplace_back(y + perimetre);
+    vectX.emplace_back(x + (perimetre / 3.0f));
+    vectY.emplace_back(y - (perimetre / 2.5f));
     
-    vectX.emplace_back(x + perimetre + (2 * perimetre));
-    vectY.emplace_back(y);
+    vectX.emplace_back(x - (perimetre / 3.0f));
+    vectY.emplace_back(y - (perimetre / 2.0f));
     
-    vectX.emplace_back(x + perimetre);
-    vectY.emplace_back(y - perimetre);
+    vectX.emplace_back(x - (perimetre / 2.0f));
+    vectY.emplace_back(y - (perimetre / 3.0f));
     
-    vectX.emplace_back(x + perimetre);
-    vectY.emplace_back(y - perimetre - (2 * perimetre));
+    vectX.emplace_back(x - (perimetre / 2.5f));
+    vectY.emplace_back(y + (perimetre / 3.0f));
     
-    vectX.emplace_back(x);
-    vectY.emplace_back(y - perimetre);
+    vectX.emplace_back(x - (perimetre / 3.0f));
+    vectY.emplace_back(y + (perimetre / 2.0f));
+    
     GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.5f, 0.5f, 0.5f);
-     **/
-    GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawFillRect2D(x - (perimetre / 2.6f), y + (perimetre / 2.3f), perimetre - (perimetre / 4.4f), -perimetre + (perimetre / 5.5f), 0.5f, 0.5f, 0.5f);
+    
+    //GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
 
     x -= (vitesse / 1000.0);
     

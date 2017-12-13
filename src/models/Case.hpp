@@ -35,6 +35,7 @@ class Case{
         float getY();
         float getWidth();
         float getHeight();
+        bool dejaUnVaisseau();
 };
 
 #endif /* Case_hpp */

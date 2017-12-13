@@ -223,23 +223,24 @@ void Damier::setVaisseauSelectionne(int selection){
 bool Damier::ajouterVaisseauCase(int caseSelectionne){
     bool assezArgent = false;
     switch (vaisseauSelectionneJoueur) {
+            // on verifie qu'il y a assez d'argent et qu'il n'y est pas deja un vaisseau sur la case
         case 1:
             assezArgent = argentJoueur >= 5;
-            if(assezArgent){
+            if(assezArgent && !recupererCase(caseSelectionne)->dejaUnVaisseau()){
                 argentJoueur = argentJoueur - 5;
                 recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }
             break;
         case 2:
             assezArgent = argentJoueur >= 10;
-            if(assezArgent){
+            if(assezArgent && !recupererCase(caseSelectionne)->dejaUnVaisseau()){
                 argentJoueur = argentJoueur - 10;
                 recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }
             break;
         default:
             assezArgent = argentJoueur >= 3;
-            if(assezArgent){
+            if(assezArgent && !recupererCase(caseSelectionne)->dejaUnVaisseau()){
                 argentJoueur = argentJoueur - 3;
                 recupererCase(caseSelectionne)->ajouterVaisseau(vaisseauSelectionneJoueur);
             }

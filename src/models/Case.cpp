@@ -88,3 +88,7 @@ float Case::getWidth(){
 float Case::getHeight(){
     return height;
 }
+
+bool Case::dejaUnVaisseau(){
+    return vaisseau != NULL;
+}
