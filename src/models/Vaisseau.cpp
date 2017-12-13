@@ -9,6 +9,7 @@
 #include "Vaisseau.hpp"
 
 void Vaisseau::dessiner(){
+    // utile pour centrer les vaisseaux
     float demi_width = width / 2;
     float demi_height = height / 2;
     // max 0.0f au cas ou pour pas descendre en dessous de 0.1f (visible)
@@ -60,6 +61,9 @@ void Vaisseau::setMissiles(std::queue<Missile*>* missiles){
     this->missiles = missiles;
 }
 
+/**
+ *  Renvoi s'il y a eu ou non colision avec un asteroide donne
+ **/
 bool Vaisseau::colisionAsteroide(Asteroide* asteroide){
     return asteroide->getX() <= x + width / 2;
 }

@@ -19,7 +19,7 @@
 class Vague{
     
 private:
-    int vagueNumero = 1;
+    int vagueNumero = 0;
     int tics = 0;
     int interval;
     int nbAsteroideRestantCreer;
@@ -28,8 +28,6 @@ private:
 public:
     Vague(int lignes):lignes(lignes){
         srand(time(NULL));
-        nbAsteroideRestantCreer = 5 * vagueNumero +  (rand() % vagueNumero);
-        interval = floor(100 / (2 * vagueNumero));
     }
     Asteroide* creerAsteroide();
     bool vagueFinie();

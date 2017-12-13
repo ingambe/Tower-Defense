@@ -12,6 +12,7 @@
  *  Fonction appeler a chaque tick, peut renvoier un asteroide si egal a l'interval ou NULL sinon
  **/
 Asteroide* Vague::creerAsteroide(){
+    if(vagueNumero > 0){
     tics = (tics + 1) % interval;
     int difficultee = 0;
     if(tics == 0 && nbAsteroideRestantCreer > 0){
@@ -48,13 +49,15 @@ Asteroide* Vague::creerAsteroide(){
         }
         return AsteroidesFactory::creerAsteroide(rand() % lignes, lignes, difficultee);
     }
+    }
     // si ce n'est pas le moment de creer un asteroide on renvoit NULL
     // il ne sera pas ajouter a la liste des asteroides
     return NULL;
 }
 
 bool Vague::vagueFinie(){
-    return nbAsteroideRestantCreer <= 0;
+    // soit il n'y a plus d'asteroides a creer, soit on a pas encore commence
+    return nbAsteroideRestantCreer <= 0 || vagueNumero == 0;
 }
 
 void Vague::incrementerVague(){

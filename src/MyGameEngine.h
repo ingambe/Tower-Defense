@@ -13,7 +13,6 @@ private:
 public:
     
     MyGameEngine(Damier* damier, int nombre_de_case):damier(damier), nombre_de_case(nombre_de_case){}
-    
     virtual void idle();
     
 };

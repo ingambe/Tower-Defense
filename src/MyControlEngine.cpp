@@ -6,6 +6,8 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
         if(caseCliquee < (lignes * colonnes) && caseCliquee != -1){
             damier->ajouterVaisseauCase(caseCliquee);
         } else if(caseCliquee == -1){
+            // on convertie le click [0, taille fenetre] en coordonne [-1,1] et on lui envoie le choix
+            // sert a choisir les vaisseaux a placer
             int choixVaisseau = damier->coordoneeChoixVaisseau(2.0f * ((1.0f * x) / glutGet(GLUT_WINDOW_WIDTH)) - 1.0f, 2.0f * ((1.0f * -y) / glutGet(GLUT_WINDOW_HEIGHT)) + 1.0f);
             damier->setVaisseauSelectionne(choixVaisseau);
         } else {
@@ -15,11 +17,15 @@ void MyControlEngine::MouseCallback(int button, int state, int x, int y){
 }
 
 void MyControlEngine::KeyboardCallback(unsigned char key,int x, int y){
+    // si la vague est fini et qu'on appuye sur entree, on lance une nouvelle vague
     if(damier->vagueFinie() && !damier->partieFinie() && key == '\r'){
         damier->incrementerVague();
     }
 }
 
+/**
+ *  Recupere la case ou l'utilisateu a clique
+ **/
 int MyControlEngine::caseCoordonees(const int x, const int y){
     int hauteurFenetre = glutGet(GLUT_WINDOW_HEIGHT);
     int largeurFenetre = glutGet(GLUT_WINDOW_WIDTH);

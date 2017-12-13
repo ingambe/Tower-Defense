@@ -14,6 +14,7 @@
 Damier* DamierFactory::creerDamier(int lignes, int colonnes){
     Case** cases = new Case*[nombreDeCases(lignes, colonnes)];
     float largeur = 2.0f / colonnes;
+    // 1.8f car on a 0.2f de bandeau en haut pour les informations
     float hauteur = 1.8f / lignes;
     for(int ligne = 0; ligne < lignes; ligne++){
         for(int colonne = 0; colonne < colonnes; colonne++){

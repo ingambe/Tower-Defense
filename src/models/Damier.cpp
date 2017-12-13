@@ -141,7 +141,7 @@ void Damier::drawSelecteurVaisseau(){
     }
     // on affiche les infos sur le vaisseau
     
-    // une string par ligne d'information
+    // une string par ligne d'information sur les vaisseaux
     char* str1 = new char[50];
     char* str2 = new char[50];
     char* str3 = new char[50];
@@ -199,6 +199,9 @@ void Damier::drawSelecteurVaisseau(){
     str4 = NULL;
 }
 
+/**
+ *  Renvoie le vaisseau choisis en fonction des coordonees du click de l'utilisateur
+ **/
 int Damier::coordoneeChoixVaisseau(float x, float y){
     if(x >= 0.48f && x <= 0.57f && y >= 0.85f && y <= 0.95f){
         return 0;
