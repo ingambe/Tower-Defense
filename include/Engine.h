@@ -10,7 +10,7 @@
 class Engine {
 public:
     
-    Engine(int argc, char * argv[],int width = 800,int height = 600,char * title = "TP");
+    Engine(int argc, char * argv[],int width = 800,int height = 600,char * title = "Projet PIERRE TASSEL");
     
     //these methods are in the header file because you have to see that the previous Engines are deleted...
     void setControlEngine(ControlEngine* crtE){
