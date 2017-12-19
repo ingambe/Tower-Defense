@@ -329,3 +329,7 @@ bool Damier::vagueFinie(){
 void Damier::gererVague(){
     ajouterAsteroide(vague->creerAsteroide());
 }
+
+int Damier::getNumeroVague(){
+    return vague->getNumeroVague();
+}

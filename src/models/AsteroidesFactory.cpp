@@ -54,7 +54,7 @@ Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficul
     float x = 1.0f + asteroide->getPerimetre();
     asteroide->setX(x);
     // a modifier quand il y aura les cercles a la place des carrees
-    asteroide->setY(0.6f - (ligne * hauteurCase) - (hauteurCase / 2.0f)+ (asteroide->getPerimetre() / 2.0f));
+    asteroide->setY(0.6f - (ligne * hauteurCase) - (hauteurCase / 2.0f) + (asteroide->getPerimetre() / 2.0f));
     return asteroide;
 }
 

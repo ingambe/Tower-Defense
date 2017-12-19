@@ -56,6 +56,7 @@ class Damier {
         bool vagueFinie();
         void gererVague();
         bool plusAsteroide();
+        int getNumeroVague();
 };
 
 #endif /* Damier_hpp */
