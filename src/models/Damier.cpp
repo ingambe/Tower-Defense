@@ -19,6 +19,14 @@ Damier::~Damier(){
         delete cases;
     }
     cases = NULL;
+    if(vague != NULL){
+        delete vague;
+    }
+    vague = NULL;
+    if(asteroides != NULL){
+        delete asteroides;
+    }
+    asteroides = NULL;
 }
 
 Case* Damier::recupererCase(int ligne, int colonne){
