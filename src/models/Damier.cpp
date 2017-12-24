@@ -154,41 +154,46 @@ void Damier::drawSelecteurVaisseau(){
     char* str2 = new char[50];
     char* str3 = new char[50];
     char* str4 = new char[50];
+    char* str5 = new char[50];
     switch(vaisseauSelectionneJoueur){
         case 1:
             sprintf(str1, "degat : %d", 2);
             sprintf(str2, "vitesse : %d", 4);
             sprintf(str3, "vie : %d", 3);
             sprintf(str4, "cout : %d", 5);
+            sprintf(str5, "portee : %d", 2);
             break;
         case 2:
             sprintf(str1, "degat : %d", 4);
             sprintf(str2, "vitesse : %d", 6);
             sprintf(str3, "vie : %d", 4);
             sprintf(str4, "cout : %d", 10);
+            sprintf(str5, "portee : %d", 3);
             break;
         default:
             sprintf(str1, "degat : %d", 1);
             sprintf(str2, "vitesse : %d", 2);
             sprintf(str3, "vie : %d", 2);
             sprintf(str4, "cout : %d", 3);
+            sprintf(str5, "portee : %d", 1);
             break;
     }
     // On les affiches en suite a droite de la selection
-    GraphicPrimitives::drawText2D(str1, 0.78f, 0.95f, 1.0f, 1.0f, 1.0f);
-    GraphicPrimitives::drawText2D(str2, 0.78f, 0.90f, 1.0f, 1.0f, 1.0f);
-    GraphicPrimitives::drawText2D(str3, 0.78f, 0.85f, 1.0f, 1.0f, 1.0f);
+    GraphicPrimitives::drawText2D(str1, 0.78f, 0.96f, 1.0f, 1.0f, 1.0f);
+    GraphicPrimitives::drawText2D(str2, 0.78f, 0.92f, 1.0f, 1.0f, 1.0f);
+    GraphicPrimitives::drawText2D(str3, 0.78f, 0.88f, 1.0f, 1.0f, 1.0f);
     // pour l'argent, si on en a pas assez, on l'affiche en rouge
     if(vaisseauSelectionneJoueur == 0 && argentJoueur < 3){
-        GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
+        GraphicPrimitives::drawText2D(str4, 0.78f, 0.84f, 1.0f, 0.5f, 0.5f);
     } else if (vaisseauSelectionneJoueur == 1 && argentJoueur < 5){
-        GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
+        GraphicPrimitives::drawText2D(str4, 0.78f, 0.84f, 1.0f, 0.5f, 0.5f);
     } else if (vaisseauSelectionneJoueur == 2 && argentJoueur < 10){
-        GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 1.0f, 0.5f, 0.5f);
+        GraphicPrimitives::drawText2D(str4, 0.78f, 0.84f, 1.0f, 0.5f, 0.5f);
     } else {
         // sinon on l'affiche en vert
-        GraphicPrimitives::drawText2D(str4, 0.78f, 0.80f, 0.5f, 1.0f, 0.5f);
+        GraphicPrimitives::drawText2D(str4, 0.78f, 0.84f, 0.5f, 1.0f, 0.5f);
     }
+    GraphicPrimitives::drawText2D(str5, 0.78f, 0.80f, 1.0f, 1.0f, 1.0f);
     if(str1 != NULL){
         delete[] str1;
     }
@@ -205,6 +210,10 @@ void Damier::drawSelecteurVaisseau(){
         delete[] str4;
     }
     str4 = NULL;
+    if(str5 != NULL){
+        delete[] str5;
+    }
+    str5 = NULL;
 }
 
 /**

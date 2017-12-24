@@ -13,7 +13,7 @@ void Vaisseau::dessiner(){
     float demi_width = width / 2;
     float demi_height = height / 2;
     // max 0.0f au cas ou pour pas descendre en dessous de 0.1f (visible)
-    GraphicPrimitives::drawFillTriangle2D(x + demi_width, y, x - demi_width, y + demi_height, x - demi_width, y - demi_height, std::max(0.1f, couleur.getRed() - (0.15f * degatSubit)), std::max(0.1f, couleur.getGreen() - (0.15f * degatSubit)), std::max(0.1f, couleur.getBlue() - (0.15f * degatSubit)));
+    GraphicPrimitives::drawFillTriangle2D(x + demi_width, y, x - demi_width, y + demi_height, x - demi_width, y - demi_height, std::max(0.0f, couleur.getRed() - (0.2f * degatSubit)), std::max(0.0f, couleur.getGreen() - (0.2f * degatSubit)), std::max(0.0f, couleur.getBlue() - (0.2f * degatSubit)));
     // temps en seconde, compteur incremente toute les 0,01s
     if(compteur % (temps * 10) == 0){
         tirerMissile();
@@ -43,7 +43,7 @@ void Vaisseau::dessiner(){
  *  On ajoute un missile a la file des missiles
  */
 void Vaisseau::tirerMissile(){
-    missiles->push(new Missile(x + width / 2, y, puissance, vitesse, couleur));
+    missiles->push(new Missile(x + width / 2, y, puissance, vitesse, couleur, portee));
 }
 
 Vaisseau::~Vaisseau(){

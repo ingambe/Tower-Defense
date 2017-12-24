@@ -9,13 +9,16 @@
 #include "Missile.hpp"
 
 void Missile::dessiner(){
-    // les missiles deviennent plus gros si ils causent beaucoup de degats
-    GraphicPrimitives::drawLine2D(x, y, x + width_missile + (0.02f * degat), y, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
-    x += (vitesse / 1000.0);
+    if(parcouru < portee){
+        // les missiles deviennent plus gros si ils causent beaucoup de degats
+        GraphicPrimitives::drawLine2D(x, y, x + width_missile + (0.02f * degat), y, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
+        x += (vitesse / 1000.0);
+        parcouru += (vitesse / 1000.0);
+    }
 }
 
 bool Missile::isVisible(){
-    return x <= 1.0f;
+    return x <= 1.0f && parcouru < portee;
 }
 
 float Missile::getX(){
@@ -31,7 +34,7 @@ void Missile::collision(){
 }
 
 bool Missile::isASupprimer(){
-    return !isVisible() ||colision;
+    return !isVisible() || colision;
 }
 
 int Missile::getDegat(){

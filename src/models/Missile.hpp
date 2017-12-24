@@ -21,9 +21,11 @@ class Missile{
         int vitesse;
         bool colision;
         Couleur couleur;
+        float portee;
+        float parcouru;
     
     public:
-        Missile(float x, float y, int degat, int vitesse, Couleur couleur):x(x), y(y), degat(degat), vitesse(vitesse), colision(false), couleur(couleur){};
+        Missile(float x, float y, int degat, int vitesse, Couleur couleur, float portee):x(x), y(y), degat(degat), vitesse(vitesse), colision(false), couleur(couleur), portee(portee), parcouru(0){};
         const float width_missile = 0.05f;
         void dessiner();
         bool isVisible();

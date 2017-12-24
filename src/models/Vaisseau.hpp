@@ -31,10 +31,11 @@ class Vaisseau{
         Couleur couleur;
         // sert a l'assombrissement des vaisseaux lors de la reception de degats
         int degatSubit = 0;
+        float portee;
     
     public:
         // temps = 1 / frequence
-        Vaisseau(float x, float y, float width, float height, int vie, int temps, int puissance, int vitesse, Couleur couleur):x(x), y(y), width(width), height(height), vie(vie), temps(temps), puissance(puissance), vitesse(vitesse), couleur(couleur){
+        Vaisseau(float x, float y, float width, float height, int vie, int temps, int puissance, int vitesse, Couleur couleur, float portee):x(x), y(y), width(width), height(height), vie(vie), temps(temps), puissance(puissance), vitesse(vitesse), couleur(couleur), portee(portee){
             missiles = new std::queue<Missile*>();
         };
         ~Vaisseau();
