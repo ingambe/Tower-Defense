@@ -41,6 +41,8 @@ void Asteroide::dessiner(){
     GraphicPrimitives::drawFillRect2D(x - (perimetre / 2.6f), y + (perimetre / 2.3f), perimetre - (perimetre / 4.4f), -perimetre + (perimetre / 5.5f), 0.5f, 0.5f, 0.5f);
     
     //GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
+    
+    std::cout << "x : " << x << " y : " << y << std::endl;
 
     x -= (vitesse / 1000.0);
     
