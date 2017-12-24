@@ -19,6 +19,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
     float perimetre;
     int score;
     int argent;
+    Couleur couleur;
     switch (difficultee) {
         case 1:
             vie = 4;
@@ -27,6 +28,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             perimetre = 0.25f;
             score = 2;
             argent = 2;
+            couleur = Couleur::jaune;
             break;
         case 2:
             vie = 8;
@@ -35,6 +37,7 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             perimetre = 0.3f;
             score = 4;
             argent = 3;
+            couleur = Couleur::vert;
             break;
         default:
             vie = 2;
@@ -43,9 +46,10 @@ Asteroide* AsteroidesFactory::asteroideDifficultee(int difficultee){
             perimetre = 0.20f;
             score = 1;
             argent = 1;
+            couleur = Couleur::gris;
             break;
     }
-    return new Asteroide(vie, x, y, degat, vitesse, perimetre, score, argent);
+    return new Asteroide(vie, x, y, degat, vitesse, perimetre, score, argent, couleur);
 }
 
 Asteroide* AsteroidesFactory::creerAsteroide(int ligne, int lignes, int difficultee){

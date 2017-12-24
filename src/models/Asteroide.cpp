@@ -37,8 +37,9 @@ void Asteroide::dessiner(){
     vectX.emplace_back(x - (perimetre / 3.0f));
     vectY.emplace_back(y + (perimetre / 2.0f));
     
-    GraphicPrimitives::drawFillPolygone2D(vectX, vectY, 0.5f, 0.5f, 0.5f);
-    GraphicPrimitives::drawFillRect2D(x - (perimetre / 2.6f), y + (perimetre / 2.3f), perimetre - (perimetre / 4.4f), -perimetre + (perimetre / 5.5f), 0.5f, 0.5f, 0.5f);
+    GraphicPrimitives::drawFillPolygone2D(vectX, vectY, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
+    
+    GraphicPrimitives::drawFillRect2D(x - (perimetre / 2.6f), y + (perimetre / 2.3f), perimetre - (perimetre / 4.4f), -perimetre + (perimetre / 5.5f), couleur.getRed(), couleur.getGreen(), couleur.getBlue());
     
     //GraphicPrimitives::drawFillRect2D(x, y, perimetre, perimetre, 0.5f, 0.5f, 0.5f);
     

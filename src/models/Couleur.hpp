@@ -30,6 +30,9 @@ class Couleur{
         static Couleur bleue;
         static Couleur blanc;
         static Couleur rouge;
+        static Couleur gris;
+        static Couleur jaune;
+        static Couleur vert;
 };
 
 #endif /* Couleur_hpp */
