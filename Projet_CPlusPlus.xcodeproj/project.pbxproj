@@ -80,17 +80,17 @@
 		7208D53E1FBC6A84006F6F2A /* DamierFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DamierFactory.cpp; sourceTree = "<group>"; };
 		7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DamierFactory.hpp; sourceTree = "<group>"; };
 		7208D5411FBC6AD8006F6F2A /* Case.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Case.cpp; path = models/Case.cpp; sourceTree = "<group>"; };
-		7208D5421FBC6AD8006F6F2A /* Case.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Case.hpp; path = models/Case.hpp; sourceTree = "<group>"; };
+		7208D5421FBC6AD8006F6F2A /* Case.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Case.hpp; sourceTree = "<group>"; };
 		7236F9AE1FDF41F600ADA3CC /* VaisseauFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = VaisseauFactory.cpp; path = models/VaisseauFactory.cpp; sourceTree = "<group>"; };
-		7236F9AF1FDF41F600ADA3CC /* VaisseauFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = VaisseauFactory.hpp; path = models/VaisseauFactory.hpp; sourceTree = "<group>"; };
+		7236F9AF1FDF41F600ADA3CC /* VaisseauFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VaisseauFactory.hpp; sourceTree = "<group>"; };
 		7236F9B11FDF515300ADA3CC /* Couleur.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Couleur.cpp; path = models/Couleur.cpp; sourceTree = "<group>"; };
-		7236F9B21FDF515300ADA3CC /* Couleur.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Couleur.hpp; path = models/Couleur.hpp; sourceTree = "<group>"; };
+		7236F9B21FDF515300ADA3CC /* Couleur.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Couleur.hpp; sourceTree = "<group>"; };
 		7236F9B41FDF5B5700ADA3CC /* Vague.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Vague.cpp; path = models/Vague.cpp; sourceTree = "<group>"; };
-		7236F9B51FDF5B5700ADA3CC /* Vague.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Vague.hpp; path = models/Vague.hpp; sourceTree = "<group>"; };
+		7236F9B51FDF5B5700ADA3CC /* Vague.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vague.hpp; sourceTree = "<group>"; };
 		723BE2081FD757DE00ABE125 /* Asteroide.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Asteroide.cpp; path = models/Asteroide.cpp; sourceTree = "<group>"; };
-		723BE2091FD757DE00ABE125 /* Asteroide.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Asteroide.hpp; path = models/Asteroide.hpp; sourceTree = "<group>"; };
+		723BE2091FD757DE00ABE125 /* Asteroide.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Asteroide.hpp; sourceTree = "<group>"; };
 		723BE20B1FD75E2D00ABE125 /* AsteroidesFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AsteroidesFactory.cpp; path = models/AsteroidesFactory.cpp; sourceTree = "<group>"; };
-		723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AsteroidesFactory.hpp; path = models/AsteroidesFactory.hpp; sourceTree = "<group>"; };
+		723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AsteroidesFactory.hpp; sourceTree = "<group>"; };
 		726ABAC11FBFB3B000388A93 /* TestDamierFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestDamierFactory.cpp; sourceTree = "<group>"; };
 		726ABAC51FBFB4EB00388A93 /* Case.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Case.hpp; sourceTree = "<group>"; };
 		726ABAC61FBFB4EB00388A93 /* Case.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Case.cpp; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		72D36A251FCE0AA1001B488D /* Damier.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Damier.cpp; path = models/Damier.cpp; sourceTree = "<group>"; };
 		72D36A261FCE0AA1001B488D /* Damier.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Damier.hpp; path = models/Damier.hpp; sourceTree = "<group>"; };
 		72D45DB21FC626BC000C077A /* Vaisseau.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Vaisseau.cpp; path = models/Vaisseau.cpp; sourceTree = "<group>"; };
-		72D45DB31FC626BC000C077A /* Vaisseau.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Vaisseau.hpp; path = models/Vaisseau.hpp; sourceTree = "<group>"; };
+		72D45DB31FC626BC000C077A /* Vaisseau.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vaisseau.hpp; sourceTree = "<group>"; };
 		72D45DB51FC63691000C077A /* Missile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Missile.cpp; path = models/Missile.cpp; sourceTree = "<group>"; };
-		72D45DB61FC63691000C077A /* Missile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Missile.hpp; path = models/Missile.hpp; sourceTree = "<group>"; };
+		72D45DB61FC63691000C077A /* Missile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Missile.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +148,7 @@
 		2EFFA0EA1F89199500D3BA04 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				728BEC1E1FF17A5300F97957 /* models */,
 				2EFFA0FE1F89199500D3BA04 /* MyGraphicEngine.h */,
 				2EFFA0FC1F89199500D3BA04 /* MyGameEngine.h */,
 				2EFFA0FA1F89199500D3BA04 /* MyControlEngine.h */,
@@ -210,25 +211,16 @@
 			isa = PBXGroup;
 			children = (
 				7208D5411FBC6AD8006F6F2A /* Case.cpp */,
-				7208D5421FBC6AD8006F6F2A /* Case.hpp */,
 				7208D53E1FBC6A84006F6F2A /* DamierFactory.cpp */,
-				7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */,
 				72D45DB21FC626BC000C077A /* Vaisseau.cpp */,
-				72D45DB31FC626BC000C077A /* Vaisseau.hpp */,
 				72D45DB51FC63691000C077A /* Missile.cpp */,
-				72D45DB61FC63691000C077A /* Missile.hpp */,
 				72D36A251FCE0AA1001B488D /* Damier.cpp */,
 				72D36A261FCE0AA1001B488D /* Damier.hpp */,
 				723BE2081FD757DE00ABE125 /* Asteroide.cpp */,
-				723BE2091FD757DE00ABE125 /* Asteroide.hpp */,
 				723BE20B1FD75E2D00ABE125 /* AsteroidesFactory.cpp */,
-				723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */,
 				7236F9AE1FDF41F600ADA3CC /* VaisseauFactory.cpp */,
-				7236F9AF1FDF41F600ADA3CC /* VaisseauFactory.hpp */,
 				7236F9B11FDF515300ADA3CC /* Couleur.cpp */,
-				7236F9B21FDF515300ADA3CC /* Couleur.hpp */,
 				7236F9B41FDF5B5700ADA3CC /* Vague.cpp */,
-				7236F9B51FDF5B5700ADA3CC /* Vague.hpp */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -242,6 +234,22 @@
 				726ABAC51FBFB4EB00388A93 /* Case.hpp */,
 			);
 			path = classesTeste;
+			sourceTree = "<group>";
+		};
+		728BEC1E1FF17A5300F97957 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7208D5421FBC6AD8006F6F2A /* Case.hpp */,
+				7208D53F1FBC6A84006F6F2A /* DamierFactory.hpp */,
+				72D45DB31FC626BC000C077A /* Vaisseau.hpp */,
+				72D45DB61FC63691000C077A /* Missile.hpp */,
+				723BE2091FD757DE00ABE125 /* Asteroide.hpp */,
+				723BE20C1FD75E2D00ABE125 /* AsteroidesFactory.hpp */,
+				7236F9AF1FDF41F600ADA3CC /* VaisseauFactory.hpp */,
+				7236F9B21FDF515300ADA3CC /* Couleur.hpp */,
+				7236F9B51FDF5B5700ADA3CC /* Vague.hpp */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
