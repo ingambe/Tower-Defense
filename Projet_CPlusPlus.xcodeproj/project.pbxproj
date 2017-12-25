@@ -148,6 +148,9 @@
 		2EFFA0EA1F89199500D3BA04 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				2EFFA0FE1F89199500D3BA04 /* MyGraphicEngine.h */,
+				2EFFA0FC1F89199500D3BA04 /* MyGameEngine.h */,
+				2EFFA0FA1F89199500D3BA04 /* MyControlEngine.h */,
 				2EFFA0EB1F89199500D3BA04 /* ControlEngine.h */,
 				2EFFA0EC1F89199500D3BA04 /* Engine.h */,
 				2EFFA0ED1F89199500D3BA04 /* GameEngine.h */,
@@ -175,11 +178,8 @@
 				7208D53D1FBC6A1D006F6F2A /* models */,
 				2EFFA0F81F89199500D3BA04 /* main.cpp */,
 				2EFFA0F91F89199500D3BA04 /* MyControlEngine.cpp */,
-				2EFFA0FA1F89199500D3BA04 /* MyControlEngine.h */,
 				2EFFA0FB1F89199500D3BA04 /* MyGameEngine.cpp */,
-				2EFFA0FC1F89199500D3BA04 /* MyGameEngine.h */,
 				2EFFA0FD1F89199500D3BA04 /* MyGraphicEngine.cpp */,
-				2EFFA0FE1F89199500D3BA04 /* MyGraphicEngine.h */,
 			);
 			path = src;
 			sourceTree = "<group>";

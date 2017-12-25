@@ -13,30 +13,31 @@ void Asteroide::dessiner(){
     std::vector<float> vectX;
     std::vector<float> vectY;
     
-    vectX.emplace_back(x + (perimetre / 3.0f));
+    vectX.emplace_back(x - (perimetre / 4.0f));
+    vectY.emplace_back(y + (perimetre / 2.0f));
+    
+    vectX.emplace_back(x + (perimetre / 4.0f));
     vectY.emplace_back(y + (perimetre / 2.0f));
     
     vectX.emplace_back(x + (perimetre / 2.0f));
-    vectY.emplace_back(y + (perimetre / 3.0f));
+    vectY.emplace_back(y);
     
-    vectX.emplace_back(x + (perimetre / 2.5f));
-    vectY.emplace_back(y - (perimetre / 3.0f));
+    vectX.emplace_back(x - (perimetre / 4.0f));
+    vectY.emplace_back(y - (perimetre / 2.0f));
     
-    vectX.emplace_back(x + (perimetre / 3.0f));
-    vectY.emplace_back(y - (perimetre / 2.5f));
-    
-    vectX.emplace_back(x - (perimetre / 3.0f));
+    vectX.emplace_back(x + (perimetre / 4.0f));
     vectY.emplace_back(y - (perimetre / 2.0f));
     
     vectX.emplace_back(x - (perimetre / 2.0f));
-    vectY.emplace_back(y - (perimetre / 3.0f));
+    vectY.emplace_back(y);
     
+    /**
     vectX.emplace_back(x - (perimetre / 2.5f));
     vectY.emplace_back(y + (perimetre / 3.0f));
     
     vectX.emplace_back(x - (perimetre / 3.0f));
     vectY.emplace_back(y + (perimetre / 2.0f));
-    
+    **/
     GraphicPrimitives::drawFillPolygone2D(vectX, vectY, couleur.getRed(), couleur.getGreen(), couleur.getBlue());
     
     GraphicPrimitives::drawFillRect2D(x - (perimetre / 2.6f), y + (perimetre / 2.3f), perimetre - (perimetre / 4.4f), -perimetre + (perimetre / 5.5f), couleur.getRed(), couleur.getGreen(), couleur.getBlue());

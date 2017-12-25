@@ -24,7 +24,7 @@ void MyControlEngine::KeyboardCallback(unsigned char key,int x, int y){
 }
 
 /**
- *  Recupere la case ou l'utilisateu a clique
+ *  Recupere la case ou l'utilisateur a clique
  **/
 int MyControlEngine::caseCoordonees(const int x, const int y){
     int hauteurFenetre = glutGet(GLUT_WINDOW_HEIGHT);
