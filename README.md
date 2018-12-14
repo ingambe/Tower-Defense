@@ -11,4 +11,4 @@ It's an XCode project, but you can modify this code to work on any plateform by 
 
 The game principale is close to Plants vs Zombies : https://fr.wikipedia.org/wiki/Plantes_contre_zombies
 
-You can find a report un french and an UML diagramn inside the PDF file : [Rapport.pdf](Rapport.pdf)
+You can find a report in french and an UML diagramn inside the PDF file : [Rapport.pdf](Rapport.pdf)
