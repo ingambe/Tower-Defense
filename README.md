@@ -1,8 +1,14 @@
-# Projet_CPlusPlus
-Ceci est le projet de jeux de Tower Defense en C++ fait par Pierre TASSEL.
+<div align="center">
+  <h1>Tower-Defense</h1>
+  <img src="example.png">
+</div>
 
-Ce git est une solution Xcode, pour l'utiliser il faut lors du démarrage de Xcode selectionner "Clone an existing project" puis il suffit de lancer le programme
+-----------------
 
-La variante de Tower Defense créé est proche du jeux Plantes vs Zombies : https://fr.wikipedia.org/wiki/Plantes_contre_zombies
+This project was done for class project in C++ and OpenGL.
 
-Un rapport comprenant un diagramme de classe est disponible à la racine du git sous le nom : Rapport.pdf
+It's an XCode project, but you can modify this code to work on any plateform by importing OpenGL library.
+
+The game principale is close to Plants vs Zombies : https://fr.wikipedia.org/wiki/Plantes_contre_zombies
+
+You can find a report un french and an UML diagramn inside the PDF file : [Rapport.pdf](Rapport.pdf)
